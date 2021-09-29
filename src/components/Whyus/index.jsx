@@ -1,6 +1,8 @@
-import "./style.css"
+import "./style.css";
 
-import ListIcon from "../../assets/imgs/list.png"
+import ListIcon from "../../assets/imgs/list.png";
+import Sphere from "../../assets/imgs/gb-circle.png";
+import SphereSmall from "../../assets/imgs/bg-circle-s.png";
 
 const ListGroup = props => <div className={props.className}>{props.children}</div> 
 
@@ -29,6 +31,10 @@ const Whyus = () => {
                     <List>Поддержка</List>
                 </ListGroup>
             </div>
+
+            <img className="sphere-small" src={SphereSmall} alt="Background circle" />
+            <img className="sphere" src={Sphere} alt="Background circle" />
+
         </section>
     )
 }

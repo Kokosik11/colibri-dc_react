@@ -1,4 +1,4 @@
-import Triangle from '../../assets/imgs/bg-item-1.svg';
+import Triangle from '../../assets/imgs/bg-item-1.png';
 
 import "./style.css"
 

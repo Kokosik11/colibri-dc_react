@@ -11,8 +11,6 @@ import SwiperCore, {
     Mousewheel
 } from 'swiper';
 
-import Noise from '../../assets/imgs/Noise.png';
-
 import ServiceCard from '../ServiceCard';
 
 SwiperCore.use([Autoplay, Scrollbar, Mousewheel]);

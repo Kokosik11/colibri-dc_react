@@ -1,0 +1,133 @@
+.projects {
+    width: 100%;
+    height: 1024px;
+    background: linear-gradient(180deg, #684085 0%, #681FA3 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 990px;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.projects-title h2 {
+    font-weight: bold;
+    font-size: 80px;
+    text-shadow: 0px 0px 64px #E543FF;
+    background: linear-gradient(#E440FF 50%, rgba(159, 70, 255, 0.6) 100%);
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projects-title .prefix {
+    width: 57px;
+    height: 11px;
+    background-color: #B500FF;
+    border-radius: 2px;
+    box-shadow: 0 0 20px #B500FF;
+}
+
+.projects-content {
+    width: 1852px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 108px;
+}
+
+.projects-content .project {
+    display: block;
+    width: 548px;
+    height: 300px;
+
+    position: relative;
+
+    background: linear-gradient(180deg, #8137BB 0%, #692C97 100%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.projects-content .project .card-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.projects-content .project .card-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -45%, #692D97 100%);
+    opacity: 1;
+    transition: .5s;
+}
+
+.projects-content .project .project-card_title {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 6;
+    transition: 0.3s;
+}
+
+.projects-content .project:hover .project-card_title {
+    bottom: 0px;
+}
+
+.projects-content .project:hover .card-img::before {
+    opacity: 0;
+}
+
+.projects-content .swiper-button-next, 
+.projects-content .swiper-button-prev {
+    color: #E440FF;
+}
+
+@media (max-width: 1007px) {
+    .projects-title {
+        max-width: 730px;
+    }
+
+    .projects-title h2 {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 727px) {
+    .projects-title {
+        max-width: 420px;
+    }
+
+    .projects-title h2 {
+        font-size: 32px;
+    }
+
+    .projects-title .prefix {
+        width: 30px;
+        height: 6px;
+    }
+}
+
+@media (max-width: 420px) {
+    .projects-title .prefix {
+        display: none;
+    }
+}
