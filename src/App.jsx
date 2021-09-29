@@ -1,6 +1,6 @@
 import './App.css';
 
-import { Header, Mainpage, Service, Whyus } from './components' ;
+import { Header, Mainpage, Service, Whyus, Projects, Partners } from './components' ;
 
 function App() {
   return (
@@ -9,6 +9,8 @@ function App() {
         <Mainpage />
         <Service />
         <Whyus />
+        <Projects />
+        <Partners />
     </main>
   );
 }

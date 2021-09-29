@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .why-us_title {
@@ -76,4 +77,101 @@
     font-weight: 600;
     font-size: 30px;
     line-height: 111.6%;
+}
+
+.sphere {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.sphere-small {
+    position: absolute;
+    top: 291px;
+    left: 0;
+}
+
+@media (max-width: 1397px) {
+    .sphere {
+        right: -100px;
+    }
+    .sphere-small {
+        left: -50px;
+    }
+}
+
+@media (max-width: 1287px) {
+    .sphere {
+        right: -200px;
+    }
+    .sphere-small {
+        left: -150px;
+    }
+}
+
+@media (max-width: 1067px) {
+    .sphere {
+        right: -300px;
+    }
+    .sphere-small {
+        left: -250px;
+    }
+}
+
+@media (max-width: 910px) {
+    .sphere {
+        display: none;
+    }
+    .sphere-small {
+        display: none;
+    }
+}
+
+
+@media (max-width: 877px) {
+    .why-us_title {
+        max-width: 630px;
+    }
+
+    .why-us_title h2 {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 623px) {
+    .why-us_title {
+        max-width: 380px;
+    }
+
+    .why-us_title h2 {
+        font-size: 32px;
+    }
+
+    .why-us_title .prefix {
+        width: 30px;
+        height: 6px;
+    }
+
+    .why-us_text {
+        font-size: 1.25rem;
+    }
+
+    .why-us_pink {
+        font-size: 1.25rem;
+    }
+
+    .why-us_list img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .why-us_list div {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 367px) {
+    .why-us_title .prefix {
+        display: none;
+    }
 }

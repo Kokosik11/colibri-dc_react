@@ -38,8 +38,8 @@ const ServiceCard = props => {
 
                 {props.priceLevel ? 
                 <div className="card-price">
-                    <div class="card-price_level">{ priceLevelFunc(props.priceLevel) }</div>
-                    <div class="card-price_bg">{ priceLevelFunc(props.priceLevel) }</div>
+                    <div className="card-price_level">{ priceLevelFunc(props.priceLevel) }</div>
+                    <div className="card-price_bg">{ priceLevelFunc(props.priceLevel) }</div>
                 </div> 
                 : ""}
             </div>
