@@ -24,6 +24,7 @@
     text-shadow: 0px 0px 64px #7900FF;
     background: linear-gradient(#8A33F0 100%, #8211FB 60%);
     text-transform: uppercase;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -48,6 +49,7 @@
     position: absolute;
     background: linear-gradient(180deg, rgba(113, 26, 228, 0.35) 6.77%, rgba(189, 107, 178, 0.35) 99.48%);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 24px;
     z-index: 5;
     overflow: hidden;
@@ -71,7 +73,7 @@
     z-index: 5;
 }
 
-.card {
+.card, .card-firefox {
     position: relative;
     width: 420px;
     height: 537px;
@@ -79,12 +81,25 @@
     box-shadow: 4px 0 80px rgba(27, 0, 63, 0.589);
 }
 
-.card-bg-1 {
+.card-firefox {
+    background-image: url("../../assets/imgs/service-card/service-card.png");
+    background-size: 100%, 100%;
+}
+
+.card.card-bg-1 {
     background-image: url("../../assets/imgs/bg-item-2.png");
 }
 
-.card-bg-2 {
+.card.card-bg-2 {
     background-image: url("../../assets/imgs/bg-item-3.png");
+}
+
+.card-firefox.card-bg-1 {
+    background-image: url("../../assets/imgs/service-card/service-card-1.png");
+}
+
+.card-firefox.card-bg-1 {
+    background-image: url("../../assets/imgs/service-card/service-card-2.png");
 }
 
 .cards-content > div {
