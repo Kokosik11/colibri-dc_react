@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .main::after {
@@ -110,7 +111,7 @@
     }
 
     .jobs {
-        left: 0;
+        left: 20px;
         top: 380px;
     }
 
