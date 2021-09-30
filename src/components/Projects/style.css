@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    padding: 0 20px;
 }
 
 .projects-title {
@@ -126,7 +127,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .projects-title .prefix {
         display: none;
     }

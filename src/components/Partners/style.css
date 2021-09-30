@@ -6,13 +6,14 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    padding: 0 20px;
 }
 
 .partners-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 990px;
+    max-width: 890px;
     width: 100%;
     padding-top: 60px;
 }
@@ -38,9 +39,9 @@
 
 
 
-@media (max-width: 1007px) {
+@media (max-width: 917px) {
     .partners-title {
-        max-width: 730px;
+        max-width: 630px;
     }
 
     .partners-title h2 {
@@ -48,9 +49,9 @@
     }
 }
 
-@media (max-width: 727px) {
+@media (max-width: 674px) {
     .partners-title {
-        max-width: 420px;
+        max-width: 360px;
     }
 
     .partners-title h2 {

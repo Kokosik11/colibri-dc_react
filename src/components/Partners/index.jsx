@@ -5,7 +5,7 @@ const Partners = () => {
         <section className="partners">
             <div className="partners-title">
                 <div className="prefix"></div>
-                <h2>Витрина проектов</h2>
+                <h2>Наши партнеры</h2>
             </div>
         </section>
     )
