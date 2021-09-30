@@ -72,9 +72,6 @@ const Projects = () => {
                             alt="REU enrollee website"
                         />
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <ProjectCard />
-                    </SwiperSlide>
                 </Swiper>
             </div>
 

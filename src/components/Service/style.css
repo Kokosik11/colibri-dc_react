@@ -138,6 +138,13 @@
     }
 }
 
+@media (max-width: 467px) {
+    .card {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 367px) {
     .service-title .prefix {
         display: none;
