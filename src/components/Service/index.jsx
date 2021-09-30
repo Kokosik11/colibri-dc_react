@@ -11,11 +11,14 @@ import SwiperCore, {
     Mousewheel
 } from 'swiper';
 
-import ServiceCard from '../ServiceCard';
+import ServiceCard from '../ServiceCard/index.jsx';
+import FirefoxCard from '../ServiceCard/FirefoxCard.jsx';
 
 SwiperCore.use([Autoplay, Scrollbar, Mousewheel]);
 
 const Service = () => {
+    const isFirefox = typeof InstallTrigger !== 'undefined';
+    let Card = isFirefox ?  FirefoxCard : ServiceCard;
     return (
         <section className="service">
             <div className="service-title">
@@ -44,19 +47,19 @@ const Service = () => {
                 mousewheel={true}
             >
                 <SwiperSlide>
-                    <ServiceCard />
+                    <Card />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ServiceCard />
+                    <Card />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ServiceCard />
+                    <Card />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ServiceCard />
+                    <Card />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ServiceCard 
+                    <Card 
                         title="Landing page"
                         description="Разработка сайта одностраничника"
                         term="от 7 дней"
@@ -65,7 +68,7 @@ const Service = () => {
                     />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ServiceCard 
+                    <Card 
                         title="ECOMMERCE"
                         description="Разработка интернет магазина"
                         term="от 21 дней"
@@ -74,7 +77,7 @@ const Service = () => {
                     />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ServiceCard />
+                    <Card />
                 </SwiperSlide>
             </Swiper>
                 
