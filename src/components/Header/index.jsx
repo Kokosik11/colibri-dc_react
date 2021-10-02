@@ -12,7 +12,7 @@ const Header = props => {
                     <h2>Colibri Development Company</h2>
                 </div>
     
-                <div onClick={ props.onClickFunction } className="burger-btn">
+                <div onClick={ props.onBurgerOpen } className="burger-btn">
                     <div></div>           
                     <div></div>           
                     <div></div>           

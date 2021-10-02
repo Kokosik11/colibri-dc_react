@@ -1,6 +1,6 @@
 import "./style.css";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -8,26 +8,38 @@ import "swiper/css/navigation"
 
 import SwiperCore, {
     Autoplay,
-    Mousewheel,
     Navigation,
 } from 'swiper';
 
-SwiperCore.use([Autoplay, Mousewheel, Navigation]);
+SwiperCore.use([Autoplay, Navigation]);
 
 import ProjectCard from "./ProjectCard";
 import OHL from "../../assets/imgs/projects/ohl.png";
 import REUCareer from "../../assets/imgs/projects/REU-career.png";
 import REUEnrollee from "../../assets/imgs/projects/REU-enrollee.png";
 
-const Projects = () => {
+const Projects = props => {
     const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
+    const [ refObject, setRefObject ] = useState({});
+
+    const articleRef = useRef()
+
+    function handleClick() {
+        articleRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
 
     useEffect(() => {
         setWindowWidth(window.innerHeight);
     })
 
+
+    useEffect(() => {
+        setRefObject(props.setRefScroll(handleClick))
+
+    }, [refObject])
+
     return (
-        <section className="projects">
+        <section ref={ articleRef } id="projects" className="projects">
             <div className="projects-title">
                 <div className="prefix"></div>
                 <h2>Витрина проектов</h2>
@@ -49,7 +61,6 @@ const Projects = () => {
                     centeredSlides={true} 
                     loopFillGroupWithBlank={true} 
                     className="mySwiper-project"
-                    mousewheel={true}
                     navigation={true}
                 >
                     <SwiperSlide>
@@ -74,7 +85,6 @@ const Projects = () => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-
         </section>
     )
 }
