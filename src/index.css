@@ -11,3 +11,7 @@ body {
     font-style: normal;
     color: #FFFFFF;
 }
+
+html {
+    scroll-behavior: smooth;
+}

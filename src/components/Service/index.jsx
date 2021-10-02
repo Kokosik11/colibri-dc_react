@@ -8,13 +8,12 @@ import "./style.css";
 import SwiperCore, {
     Autoplay,
     Scrollbar,
-    Mousewheel
 } from 'swiper';
 
 import ServiceCard from '../ServiceCard/index.jsx';
 import FirefoxCard from '../ServiceCard/FirefoxCard.jsx';
 
-SwiperCore.use([Autoplay, Scrollbar, Mousewheel]);
+SwiperCore.use([Autoplay, Scrollbar]);
 
 const Service = () => {
     const isFirefox = typeof InstallTrigger !== 'undefined';
@@ -44,7 +43,6 @@ const Service = () => {
                 centeredSlides={true} 
                 loopFillGroupWithBlank={true} 
                 className="mySwiper"
-                mousewheel={true}
             >
                 <SwiperSlide>
                     <Card />

@@ -60,7 +60,6 @@
 
 .jobs-content {
     position: relative;
-    padding: 8px 0;
 }
 
 .line, .active-line {
@@ -71,6 +70,11 @@
     z-index: 4;
 }
 
+.jobs-title {
+    padding: 8px 0;
+    transition: .25s;
+}
+
 .line {
     width: 100%;
     background: #3F2D60;
@@ -79,8 +83,20 @@
 .active-line {
     width: 83px;
     background: linear-gradient(270deg, #9E86D7 0%, #7D00FF 100%);
+    transition: 1s;
 }
 
+.jobs:hover {
+    cursor: pointer;
+}
+
+.jobs:hover .jobs-title {
+    color: #9E86D7;
+}
+
+.active-line.active {
+    width: 100%;
+}
 
 @media (max-width: 1220px) {
     .jobs {

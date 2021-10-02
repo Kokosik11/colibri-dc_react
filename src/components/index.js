@@ -15,5 +15,5 @@ export {
     Whyus,
     Projects,
     Partners,
-    Footer
+    Footer,
 }
