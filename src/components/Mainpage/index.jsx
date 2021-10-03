@@ -20,7 +20,7 @@ const Mainpage = ({ articleRef }) => {
 
         setTimeout(() => articleRef.handleClick(), 3000)
 
-        setTimeout(() => setCloserOpen(false), 4500);
+        setTimeout(() => setCloserOpen(false), 5400);
     }
 
     return (
