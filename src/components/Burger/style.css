@@ -246,6 +246,22 @@
 }
 
 .burger-rotated-text .rotate div {
+    max-width: 170px;
+    height: 170px;
+    animation: rotation-text 3s linear infinite;
+}
+
+@keyframes rotation-text {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.burger-rotated-text .rotate div {
     position: relative;
     padding-left: 87px;
     margin-top: 92px;
@@ -258,7 +274,7 @@
 }
 
 .burger-info {
-    padding-top: 241px;
+    padding-top: 91px;
 }
 
 .burger-info a,

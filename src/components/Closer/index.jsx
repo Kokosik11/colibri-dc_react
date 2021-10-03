@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import Logo from '../../assets/imgs/colibri-logo-b.png';
+
 import './style.css';
 
 const Closer = props => {
@@ -12,6 +14,7 @@ const Closer = props => {
     return (
         <div className={ props.className }>
             <div className={ isOpen ? 'closer-down' : '' }></div>
+            <img src={ Logo } className="colibri-logo-b" />
             <div className={ isOpen ? 'closer-up' : '' }></div>
         </div>
     )
