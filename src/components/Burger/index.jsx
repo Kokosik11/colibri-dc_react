@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import "./style.css"
 
@@ -11,6 +11,17 @@ import InstagramIcon from '../../assets/imgs/social/burger-instagram.png';
 import TelegramIcon from '../../assets/imgs/social/burger-telegram.png';
 
 import BgItem from '../../assets/imgs/burger-bg-item.png';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination"
+
+import SwiperCore, {
+    Pagination
+} from 'swiper';
+
+SwiperCore.use([Pagination]);
 
 const CLink = props => <li><a href={ props.href }>{ props.children }</a></li>
 
@@ -50,7 +61,7 @@ function Heading({ text, arc, radius }) {
     );
 }
 
-const Burger = props => {
+const LeftContent = props => {
     const [ navigationBtn, setNavigationBtn ] = useState(false);
 
     const handleLeftButtonClick = () => {
@@ -61,9 +72,8 @@ const Burger = props => {
         setNavigationBtn(true);
     }
 
-    return (
-        <div className={props.className}>
-            <div className="burger-content_left">
+    return  (
+        <div className={ props.className }>
                 <header>
                     <div className="logo">
                         <img src={ Logo } alt="Colibri DC logo" />
@@ -94,46 +104,110 @@ const Burger = props => {
                             </div>
                         </footer>
                     </div>
+
+                    { props.Arrow ? <props.Arrow /> : null }
                 </div>
             </div>
+    )
+}
 
-            <div className="burger-content_right">
-                <header>
-                    <div className="burger_header-content">
-                        <div className="phone">
-                            <img src={ Phone } alt="Phone icon" />
-                            <a href="tel:+375295448533" className="number">375 29 544 85 33</a>
-                        </div>
-
-                        <div className="close" onClick={ props.onBurgerOpen }>
-                            <img src={ Close } alt="Close icon" />
-                        </div>
-                    </div>
-                </header>
-
-                <div className="burger-right_content">
-                    <div className="burger-rotated-text">
-                        <div className="rotate">
-                            <Heading text="CompanyColibri" arc={330} radius={85} />
-                        </div>
+const RightContent = props => {
+    return (
+        <div className={ props.className }>
+            <header>
+                <div className="burger_header-content">
+                    <div className="phone">
+                        <img src={ Phone } alt="Phone icon" />
+                        <a href="tel:+375295448533" className="number">375 29 544 85 33</a>
                     </div>
 
-                    <div className="burger-info">
-                        <a href="#">Почему нанять веб-агенство для своего проекта - это круто?</a>
+                    <div className="close" onClick={ props.onBurgerOpen }>
+                        <img src={ Close } alt="Close icon" />
                     </div>
-                    <div className="burger-faq">
-                        <a href="#">Часто задаваемые вопросы</a>
-                    </div>
+                </div>
+            </header>
 
-                    <div className="social-links">
-                        <a href="#"><img src={ LinkedinIcon } alt="Linkedin icon" /></a>
-                        <a href="#"><img src={ InstagramIcon } alt="Instagram icon" /></a>
-                        <a href="#"><img src={ TelegramIcon } alt="Telegram icon" /></a>
+            <div className="burger-right_content">
+                <div className="burger-rotated-text">
+                    <div className="rotate">
+                        <Heading text="CompanyColibri" arc={330} radius={85} />
                     </div>
                 </div>
 
-                <img className="burger-bg-item" src={ BgItem } alt="Background element" />
+                <div className="burger-info">
+                    <a href="#">Почему нанять веб-агенство для своего проекта - это круто?</a>
+                </div>
+                <div className="burger-faq">
+                    <a href="#">Часто задаваемые вопросы</a>
+                </div>
+
+                <div className="social-links">
+                    <a href="#"><img src={ LinkedinIcon } alt="Linkedin icon" /></a>
+                    <a href="#"><img src={ InstagramIcon } alt="Instagram icon" /></a>
+                    <a href="#"><img src={ TelegramIcon } alt="Telegram icon" /></a>
+                </div>
             </div>
+
+            <img className="burger-bg-item" src={ BgItem } alt="Background element" />
+        </div>
+    )
+}
+
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return [height, width];
+}
+
+function useWindowDimensions() {
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return windowDimensions;
+}
+
+const Arrow = () => {
+    return (
+        <div id="arrowAnim">
+            <div className="arrowSliding">
+                <div className="arrow"></div>
+            </div>
+            <div className="arrowSliding delay1">
+                <div className="arrow"></div>
+            </div>
+            <div className="arrowSliding delay2">
+                <div className="arrow"></div>
+            </div>
+            <div className="arrowSliding delay3">
+                <div className="arrow"></div>
+            </div>
+        </div>
+    )
+}
+
+const Burger = props => {
+    const [ height, width ] = useWindowDimensions();
+
+    console.log(width);
+
+    return width > 1100 ? (
+        <div className={props.className}>
+            <LeftContent className="burger-content_left" />
+            <RightContent className="burger-content_right" />
+        </div>
+    ) : (
+        <div className={ props.className }>
+            <Swiper pagination={true} className="mySwiper">
+                <SwiperSlide><LeftContent Arrow={ Arrow } className="burger-content_left" /></SwiperSlide>
+                <SwiperSlide><RightContent className="burger-content_right" onBurgerOpen={ props.onBurgerOpen } /></SwiperSlide>
+            </Swiper>
         </div>
     )
 }
