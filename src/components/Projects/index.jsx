@@ -17,10 +17,42 @@ import ProjectCard from "./ProjectCard";
 import OHL from "../../assets/imgs/projects/ohl.png";
 import REUCareer from "../../assets/imgs/projects/REU-career.png";
 import REUEnrollee from "../../assets/imgs/projects/REU-enrollee.png";
+import Loader from '../Loader';
+
 
 const Projects = props => {
     const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
     const [ refObject, setRefObject ] = useState({});
+    const [ error, setError ] = useState("");
+    const [ projectData, setServiceData ] = useState([]);
+    const [ loading, setLoading ] = useState(true);
+
+    useEffect(() => {
+        setError("");
+
+        const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
+
+        fetch("http://localhost:3010/project", {
+            method: "GET",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(async response => {
+            if(response.ok) {
+                const data = await response.json();
+                setServiceData(data.projects);
+                setLoading(false);
+            } else {
+                setError(genericErrorMessage);
+                setLoading(false);
+            }
+        }, async error => {
+            setError(genericErrorMessage);
+            setLoading(false);
+        })
+    }, [])
 
     const articleRef = useRef()
 
@@ -45,7 +77,8 @@ const Projects = props => {
                 <h2>Витрина проектов</h2>
             </div>
             
-            
+            { error ? (<div className="error-handler">{ error }</div>) 
+            : loading ? <Loader /> : (            
 
             <div className="projects-content">
                 <Swiper 
@@ -63,7 +96,17 @@ const Projects = props => {
                     className="mySwiper-project"
                     navigation={true}
                 >
-                    <SwiperSlide>
+                    { projectData.map(project => (
+                        <SwiperSlide key={project._id}>
+                            <ProjectCard 
+                                img={ `/src/assets/imgs/projects/${ project.imageURL }`}
+                                alt={ project.title }
+                                title={ project.title }
+                                href={ project.link }
+                            />
+                        </SwiperSlide>
+                    ))}
+                    {/* <SwiperSlide>
                         <ProjectCard 
                             img={OHL} 
                             alt="OHL website"
@@ -82,9 +125,9 @@ const Projects = props => {
                             img={REUEnrollee} 
                             alt="REU enrollee website"
                         />
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
-            </div>
+            </div>) }
         </section>
     )
 }
