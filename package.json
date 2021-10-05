@@ -6,6 +6,7 @@
     "build": "vite build --base=./",
     "serve": "vite preview"
   },
+  "proxy": "http://localhost:3010",
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
