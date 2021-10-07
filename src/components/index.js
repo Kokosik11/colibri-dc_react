@@ -4,7 +4,7 @@ import Mainpage from './Mainpage';
 import Service from './Service';
 import Whyus from './Whyus';
 import Projects from './Projects';
-import Partners from './Partners';
+import Prefooter from './Prefooter';
 import Footer from './Footer';
 
 export {
@@ -14,6 +14,6 @@ export {
     Service,
     Whyus,
     Projects,
-    Partners,
+    Prefooter,
     Footer,
 }

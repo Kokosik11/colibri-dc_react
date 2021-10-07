@@ -39,8 +39,6 @@
 
 .cards-content {
     width: 1944px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .card-content {

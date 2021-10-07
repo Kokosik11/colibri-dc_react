@@ -1,0 +1,176 @@
+.prefooter {
+    width: 100%;
+    height: 615px;
+    background: linear-gradient(180deg, #6920A3 0%, #2E4D7C 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.prefooter-content {
+    max-width: 1205px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prefooter-content .bids {
+    width: 564px;
+}
+
+.prefooter-content .partners {
+    width: 597px;
+}
+
+.prefooter-content .bids,
+.prefooter-content .partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prefooter-content h2 {
+    font-weight: bold;
+    font-size: 46px;
+    text-shadow: 0px 0px 64px #8A33F0;
+    background: linear-gradient(#9031FF 50%, #9f46ffbb 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bids-forms {
+    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bids-contacts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bids-contacts input {
+    width: 274px;
+    height: 48px;
+    background: linear-gradient(180deg, rgba(113, 26, 228, 0.35) 6.77%, rgba(189, 107, 178, 0.35) 99.48%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bids-contacts input[type="email"] {
+    border-top-left-radius: 20px;
+}
+
+.bids-contacts input[type="text"] {
+    border-top-right-radius: 20px;
+}
+
+.bids-content, .bids-contacts input {
+    padding: 24px 14px;
+    outline: none;
+    border: none;
+    color: #fdcdff;
+
+}
+
+.bids-content::placeholder, .bids-contacts input::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+
+    color: #DA81FF;
+}
+
+.bids-content {
+    max-width: 564px;
+    margin: 16px 0;
+    width: 100%;
+    min-height: 162px;
+    max-height: 400px;
+    resize: vertical;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(180deg, rgba(189, 107, 178, 0.35) 6.77%, rgba(113, 26, 228, 0.35) 99.48%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.partners-content {
+    margin-top: 33px;
+    width: 100%;
+    background: linear-gradient(#871AFF, #b36bff7c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    line-height: 111.6%;
+}
+
+.bids-check {
+    font-weight: 500;
+    font-size: 10px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.bids-check label {
+    margin-left: 11px;
+}
+
+.bids-check label .pink {
+    color: #EFA6C4;
+}
+
+.bids-check input {
+    background-color: #6D45BE;
+    border: none;
+    outline: none;
+}
+
+.bids-forms button {
+    background: #6D45BE;
+    border-radius: 8px;
+    width: 252px;
+    height: 48px;
+    border: none;
+    outline: none;
+    margin-top: 16px;
+    color: #EFA6C4;
+    transition: .25s;
+}
+
+.bids-forms button:hover {
+    cursor: pointer;
+    background: #7b51ce;
+}
+
+.error-handler {
+    color: rgb(255, 78, 122);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* .partners-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 890px;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.partners-title h2 {
+    font-weight: bold;
+    font-size: 80px;
+    text-shadow: 0px 0px 64px #8A33F0;
+    background: linear-gradient(#9031FF 50%, #9f46ffbb 100%);
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */

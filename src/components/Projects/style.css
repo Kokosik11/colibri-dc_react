@@ -24,6 +24,7 @@
     text-shadow: 0px 0px 64px #E543FF;
     background: linear-gradient(#E440FF 50%, rgba(159, 70, 255, 0.6) 100%);
     text-transform: uppercase;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

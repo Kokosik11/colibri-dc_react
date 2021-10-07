@@ -28,11 +28,11 @@ const Projects = props => {
     const [ loading, setLoading ] = useState(true);
 
     useEffect(() => {
-        setError("");
 
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
+        setError("");
 
-        fetch("http://localhost:3010/project", {
+        fetch("/project", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -40,10 +40,12 @@ const Projects = props => {
             }
         })
         .then(async response => {
-            if(response.ok) {
+            if(response.status === 502) {
+                setError("В Базе данных нет записей")
+            } else if(response.ok) {
                 const data = await response.json();
-                setServiceData(data.projects);
                 setLoading(false);
+                setServiceData(data.projects);
             } else {
                 setError(genericErrorMessage);
                 setLoading(false);
@@ -51,6 +53,9 @@ const Projects = props => {
         }, async error => {
             setError(genericErrorMessage);
             setLoading(false);
+        })
+        .then(() => {
+            console.log(projectData)
         })
     }, [])
 

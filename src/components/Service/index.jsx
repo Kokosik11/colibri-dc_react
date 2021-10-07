@@ -22,11 +22,11 @@ const Service = () => {
     const [ loading, setLoading ] = useState(true);
 
     useEffect(() => {
-        setError("");
 
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
+        setError("");
 
-        fetch("http://localhost:3010/service", {
+        fetch("/service", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -34,10 +34,12 @@ const Service = () => {
             }
         })
         .then(async response => {
-            if(response.ok) {
+            if(response.status === 502) {
+                setError("В Базе данных нет записей")
+            } else if(response.ok) {
                 const data = await response.json();
-                setServiceData(data.services);
                 setLoading(false);
+                setServiceData(data.services);
             } else {
                 setError(genericErrorMessage);
                 setLoading(false);
@@ -45,6 +47,9 @@ const Service = () => {
         }, async error => {
             setError(genericErrorMessage);
             setLoading(false);
+        })
+        .then(() => {
+            console.log(serviceData)
         })
     }, [])
 

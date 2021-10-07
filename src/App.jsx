@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import {  Header, Mainpage, Burger,
           Service, Whyus, Projects, 
-          Partners, Footer } from './components' ;
+          Prefooter, Footer } from './components' ;
 
 function App() {
   const [ isBurgerOpened, setIsBurgerOpened ] = useState(false);
@@ -50,7 +50,7 @@ function App() {
         <Service />
         <Whyus />
         <Projects setRefScroll={ setRefScrollFuncion } />
-        <Partners />
+        <Prefooter />
         <Footer />
     </main>
   );

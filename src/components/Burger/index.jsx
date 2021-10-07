@@ -200,7 +200,7 @@ const Burger = props => {
     return width > 1100 ? (
         <div className={props.className}>
             <LeftContent className="burger-content_left" />
-            <RightContent className="burger-content_right" />
+            <RightContent className="burger-content_right" onBurgerOpen={ props.onBurgerOpen } />
         </div>
     ) : (
         <div className={ props.className }>
