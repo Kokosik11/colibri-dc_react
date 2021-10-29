@@ -47,8 +47,8 @@ function App() {
         <Header onBurgerOpen={ handleBurgerOpenButtonClick } />
         { isBurgerOpened ? <Burger onBurgerOpen={ handleBurgerCloseButtonClick } className='burger' /> : null }
         <Mainpage articleRef={ refScroll } />
-        <Service />
         <Whyus />
+        <Service />
         <Projects setRefScroll={ setRefScrollFuncion } />
         <Prefooter />
         <Footer />

@@ -26,7 +26,7 @@ const Service = () => {
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
         setError("");
 
-        fetch("/service", {
+        fetch("http://localhost:3010/service", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -62,6 +62,8 @@ const Service = () => {
                 <h2>Мы предлагаем</h2>
             </div>
 
+            <div className="service-pricelvl">$ - диапозон цен</div>
+
             { error ? (<div className="error-handler">{ error }</div>) 
             : loading ? <Loader /> : (
 
@@ -91,6 +93,7 @@ const Service = () => {
                             description={ card.description } 
                             term={ `от ${card.term} дней` }
                             priceLevel={ card.priceLevel }
+                            cardClass={ card.background }
                         />
                     </SwiperSlide>
                 ))}

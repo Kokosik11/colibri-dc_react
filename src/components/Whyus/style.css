@@ -1,7 +1,8 @@
 .why-us {
     width: 100%;
     height: 1024px;
-    background: linear-gradient(180deg, #6C1BAD 16.96%, #673F84 100%);
+    background: linear-gradient(180deg, #422A63 0%, #563174 56.77%, #6B1BAC 100%);
+    /* background: linear-gradient(180deg, #6C1BAD 16.96%, #673F84 100%); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,10 +51,7 @@
 .why-us_list div {
     display: flex;
     align-items: center;
-    background: linear-gradient(#6E6BF0, #9D22DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #9D22DA;
     font-weight: 600;
     font-size: 30px;
     line-height: 111.6%;

@@ -156,6 +156,76 @@
     margin-bottom: 16px;
 }
 
+.bids-forms input,
+.bids-forms textarea,
+.bids-forms button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 1090px) {
+    .prefooter {
+        height: auto;
+    }
+
+    .prefooter-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partners {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 617px) {
+    .prefooter-content .bids {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .prefooter-content .partners {
+        width: 100%;
+    }
+
+    .bids-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 487px) {
+    .bids-contacts {
+        flex-direction: column;
+    }
+
+    .bids-contacts input{
+        width: 100%;
+    }
+
+    .bids-contacts input[type="email"] {
+        border-top-right-radius: 20px;
+        background-color: rgba(189, 107, 178, 0.35);
+    }
+
+    .bids-contacts input[type="text"] {
+        border-radius: 0;
+        background-color: rgba(189, 107, 178, 0.35);
+    }
+
+    .bids-content {
+        margin-top: 0;
+        background-color: rgba(189, 107, 178, 0.35);
+    }
+}
+
+@media (max-width: 437px) {
+    .partners {
+        padding: 0 20px;
+    }
+    .partners-content {
+        text-align: left;
+    }
+}
+
 /* .partners-title {
     display: flex;
     justify-content: space-between;

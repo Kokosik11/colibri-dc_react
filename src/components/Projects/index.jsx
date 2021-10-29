@@ -32,7 +32,7 @@ const Projects = props => {
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
         setError("");
 
-        fetch("/project", {
+        fetch("http://localhost:3010/project", {
             method: "GET",
             credentials: "include",
             headers: {

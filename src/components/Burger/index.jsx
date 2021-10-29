@@ -84,18 +84,25 @@ const LeftContent = props => {
                 <div className="burger-left_content">
                     <div className="navigation">
                         <button className={ navigationBtn ? "bl-btn" : "bl-btn active" } onClick={ handleLeftButtonClick }>Навигация</button>
-                        <button className={ navigationBtn ? "bl-btn active" : "bl-btn" } onClick={ handleRightButtonClick }>Наши услуги</button>
+                        <button className={ navigationBtn ? "bl-btn active" : "bl-btn" } onClick={ handleRightButtonClick }>О нас</button>
                         <div className={ navigationBtn ? "bl-selected right" : "bl-selected left" }></div>
                     </div>
 
                     <div className="burger-left_block">
+                        {!navigationBtn && 
                         <LinkGroup className="bl-links">
                             <CLink href="#">О компании</CLink>
                             <CLink href="#">Портфолио</CLink>
                             <CLink href="#">Услуги</CLink>
-                            <CLink href="#">Свяжитесь с нами</CLink>
+                            <CLink href="#">Этапы разработки</CLink>
                         </LinkGroup>
+                        }
 
+                        {navigationBtn && 
+                        <div>
+                            Тут какой-то текст о нас
+                        </div>
+                        }
                         <footer>
                             <div className="bl-footer">
                                 <a href="#">Свидетельство о регистрации</a>
