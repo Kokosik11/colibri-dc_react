@@ -1,3 +1,72 @@
 body {
     background-color: #3F2861;
 }
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    background: #553880;
+    border-radius: 8px;
+    padding-top: 57px;
+    padding-bottom: 67px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-bottom: 71px;
+}
+
+.faq-bg {
+    width: 1030px;
+    height: 361px;
+    background: #482D70;
+    border-radius: 8px;
+}
+
+.h1-faq {
+    padding-top: 161px;
+    margin-bottom: 81px;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 60px;
+    text-shadow: 0px 0px 54px #7900ff;
+    background: linear-gradient(#9031FF 0%, #9f46ff7a 100%);
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.faq-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-title {
+    display: flex;
+    align-items: center;
+}
+
+.faq-title h2 {
+    max-width: 695px;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    color: #F6F6F6;
+}
+
+.faq-title img {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.faq span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #8C65C5;
+    max-width: 690px;
+    margin-top: 45px;
+}
