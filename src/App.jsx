@@ -1,59 +1,25 @@
-import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  Switch,
+  Route,
+  Redirect,
+  Link
+} from "react-router-dom";
 
-import {  Header, Mainpage, Burger,
-          Service, Whyus, Projects, 
-          Prefooter, Footer } from './components' ;
+import Main from './views/main.jsx';
 
-function App() {
-  const [ isBurgerOpened, setIsBurgerOpened ] = useState(false);
-  const [ refScroll, setRefScroll ] = useState({});
+const App = () => {
 
-  const setRefScrollFuncion = (handleClick) => {
-    setRefScroll({
-      handleClick
-    })
-
-    console.log(refScroll)
-  }
-
-  const handleBurgerOpenButtonClick = () => {
-    setIsBurgerOpened(true);
-    // document.querySelector('.burger').classList.add('active');
-
-    setTimeout(() => {
-      // document.querySelector('.burger').classList.remove('active');
-      document.querySelector('.burger').classList.add('opened');
-    }, 1500)
-
-    setTimeout(() => {
-      document.querySelector('.burger-content_left').style.display = 'block';
-      document.querySelector('.burger-content_right').style.display = 'block';
-      
-    }, 1500)
-
-    setTimeout(() => {
-      document.querySelector('.burger-content_left').classList.add('active');
-      document.querySelector('.burger-content_right').classList.add('active');
-    }, 2000)
-  }
-
-  const handleBurgerCloseButtonClick = () => {
-    setIsBurgerOpened(false);
-  }
-
-  return (
-    <main className="App">
-        <Header onBurgerOpen={ handleBurgerOpenButtonClick } />
-        { isBurgerOpened ? <Burger onBurgerOpen={ handleBurgerCloseButtonClick } className='burger' /> : null }
-        <Mainpage articleRef={ refScroll } />
-        <Whyus />
-        <Service />
-        <Projects setRefScroll={ setRefScrollFuncion } />
-        <Prefooter />
-        <Footer />
-    </main>
-  );
+  return(
+    <div className="App">
+      <Switch>
+        <Route path='/'>
+          <Main />
+        </Route>
+        
+      </Switch>
+    </div>
+  )
 }
 
 export default App;
