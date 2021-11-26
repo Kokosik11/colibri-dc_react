@@ -28,9 +28,9 @@ const LinkList = props => {
     )
 }
 
-const Footer = () => {
+const Footer = ({color = "blue"}) => {
     return (
-        <section className="footer">
+        <section className={`footer ${color}`}>
             <div className="footer-content">
                 <div className="colibri-info">
                     <div className="colibri-logo">
@@ -69,11 +69,11 @@ const Footer = () => {
                     </LinkList>
                 </div>
 
-                <div className="mailing">
+                {/* <div className="mailing">
                     <h3>Рассылка</h3>
 
                     <button>Подписаться</button>
-                </div>
+                </div> */}
             </div>
         </section>
     )

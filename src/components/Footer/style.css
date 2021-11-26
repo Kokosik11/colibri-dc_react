@@ -1,7 +1,14 @@
 .footer {
     width: 100%;
     min-height: 328px;
+}
+
+.footer.blue { 
     background-color: #20395F;
+}
+
+.footer.pink { 
+    background-color: #3A2558;
 }
 
 .footer-content .colibri-logo {

@@ -28,8 +28,14 @@
     font-weight: bold;
     font-size: 15px;
     line-height: 17px;
-
+    text-decoration: none;
     color: #FFFFFF;
+}
+
+.header-content a:-webkit-any-link:active {
+    color: #FFFFFF;
+    text-decoration: none;
+    outline: none;
 }
 
 .burger-btn {
