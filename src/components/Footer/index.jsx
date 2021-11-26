@@ -1,6 +1,7 @@
 import './style.css';
 
 import Logo from '../../assets/imgs/colibri-logo_footer.png';
+import LogoPink from '../../assets/imgs/colibri-logo.png';
 
 import TwitterIcon from '../../assets/imgs/social/twitter.png';
 import FacebookIcon from '../../assets/imgs/social/facebook.png';
@@ -34,7 +35,11 @@ const Footer = ({color = "blue"}) => {
             <div className="footer-content">
                 <div className="colibri-info">
                     <div className="colibri-logo">
-                        <img src={ Logo } alt="Colibri DC logo" />
+                        { color === "pink" ? (
+                            <img src={ LogoPink } alt="Colibri DC logo" />
+                        ) : (
+                            <img src={ Logo } alt="Colibri DC logo" />
+                        )}
                         <h2>Colibri Development Company</h2>
                     </div>
                     <div className="colibri-social">

@@ -53,9 +53,6 @@ const App = () => {
 
         <Redirect from='/' to='/home' />
       </Switch>
-
-      <Footer />
-
     </div>
   )
 }

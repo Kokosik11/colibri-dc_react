@@ -1,6 +1,7 @@
 import '../assets/css/faq.css'
 import ArrowDown from '../assets/imgs/arrow-down.svg';
 import React, { useState, useEffect } from 'react';
+import Footer from '../components/Footer';
 
 
 const Question = props => {
@@ -56,6 +57,8 @@ function Faqpage() {
                     <Question question={question} key={question.id} />
                 ))}
             </div>
+
+            <Footer color="pink" />
         </main>
     )
 }
