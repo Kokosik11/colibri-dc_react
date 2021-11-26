@@ -94,6 +94,11 @@
     color: #266FDC;
 }
 
+.footer.pink .mailing h3,
+.footer.pink .footer-links .links-group .links-title {
+    color: #7F13FF;
+}
+
 .footer-links .links-group ul {
     list-style: none;
 }

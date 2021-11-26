@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../components/Footer';
 
 import {  Mainpage,
           Service, Whyus, Projects, 
@@ -23,6 +24,9 @@ function Main() {
         <Service />
         <Projects setRefScroll={ setRefScrollFuncion } />
         <Prefooter />
+
+        <Footer />
+
     </main>
   );
 }
