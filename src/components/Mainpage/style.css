@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     padding: 0 20px;
+    overflow: hidden;
 }
 
 .main::after {
@@ -24,7 +25,7 @@
     position: absolute;
     z-index: 4;
     left: 0;
-    top: 147px;
+    top: 156px;
 }
 
 .tagline {
@@ -84,6 +85,10 @@
     width: 83px;
     background: linear-gradient(270deg, #9E86D7 0%, #7D00FF 100%);
     transition: 1s;
+}
+
+.jobs-content:hover .active-line {
+    width: 120px;
 }
 
 .jobs:hover {

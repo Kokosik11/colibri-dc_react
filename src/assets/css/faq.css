@@ -1,3 +1,120 @@
 body {
     background-color: #3F2861;
 }
+
+.faq {
+    max-width: 1200px;
+    height: 240px;
+    margin-bottom: 71px;
+    transition: all .25s;
+    position: relative;
+}
+
+.faq-back_block {
+    z-index: 5;
+    position: absolute;
+    background-color: #482D70;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.faq.open .faq-back_block {
+    bottom: -20px;
+    right: -25px;
+}
+
+.faq-content {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background: #553880;
+    border-radius: 8px;
+    height: 100%;
+    /* padding-top: 57px;
+    padding-bottom: 67px;
+    padding-left: 150px;
+    padding-right: 150px; */
+    padding: 57px 150px 67px;
+    transition: all .25s;
+}
+
+.question-arrow {
+    margin-top: 10px;
+    transform: rotate(0deg);
+    transition: all .25s;
+}
+
+.question-arrow.open {
+    transform: rotate(180deg);
+    /* transition: all .25s; */
+}
+
+.faq.open {
+    height: 400px; 
+}
+
+.faq-bg {
+    width: 1030px;
+    height: 361px;
+    background: #482D70;
+    border-radius: 8px;
+}
+
+.h1-faq {
+    padding-top: 161px;
+    margin-bottom: 81px;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 60px;
+    text-shadow: 0px 0px 54px #7900ff;
+    background: linear-gradient(#9031FF 0%, #9f46ff7a 100%);
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.faq-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.faq-title h2 {
+    max-width: 695px;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    color: #F6F6F6;
+}
+
+.faq-title img {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.faq-content span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #8C65C5;
+    max-width: 690px;
+    margin-top: 45px;
+}

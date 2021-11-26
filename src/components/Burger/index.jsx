@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { Link, NavLink } from "react-router-dom";
+
 import "./style.css"
 
 import Logo from '../../assets/imgs/colibri-logo.png';
@@ -23,7 +25,7 @@ import SwiperCore, {
 
 SwiperCore.use([Pagination]);
 
-const CLink = props => <li><a href={ props.href }>{ props.children }</a></li>
+// const CLink = props => <li><a href={ props.href }>{ props.children }</a></li>
 
 const LinkGroup = props => {
     return (
@@ -91,10 +93,10 @@ const LeftContent = props => {
                     <div className="burger-left_block">
                         {!navigationBtn && 
                         <LinkGroup className="bl-links">
-                            <CLink href="#">О компании</CLink>
-                            <CLink href="#">Портфолио</CLink>
-                            <CLink href="#">Услуги</CLink>
-                            <CLink href="#">Этапы разработки</CLink>
+                            <NavLink to="/" onClick={ props.onBurgerOpen }>О компании</NavLink>
+                            <NavLink to="/" onClick={ props.onBurgerOpen }>Портфолио</NavLink>
+                            <NavLink to="/" onClick={ props.onBurgerOpen }>Услуги</NavLink>
+                            <NavLink to="/" onClick={ props.onBurgerOpen }>Этапы разработки</NavLink>
                         </LinkGroup>
                         }
 
@@ -105,9 +107,9 @@ const LeftContent = props => {
                         }
                         <footer>
                             <div className="bl-footer">
-                                <a href="#">Свидетельство о регистрации</a>
+                                <Link to="/" onClick={ props.onBurgerOpen }>Свидетельство о регистрации</Link>
                                 <div className="bl-dot"></div>
-                                <a href="#">Карта сайта</a>
+                                <Link to="/" onClick={ props.onBurgerOpen }>Карта сайта</Link>
                             </div>
                         </footer>
                     </div>
@@ -142,15 +144,15 @@ const RightContent = props => {
                 </div>
 
                 <div className="burger-info">
-                    <a href="#">Почему нанять веб-агенство для своего проекта - это круто?</a>
+                    <NavLink to="/" onClick={ props.onBurgerOpen }>Почему нанять веб-агенство для своего проекта - это круто?</NavLink>
                 </div>
                 <div className="burger-faq">
-                    <a href="#">Часто задаваемые вопросы</a>
+                    <NavLink to="/faq" onClick={ props.onBurgerOpen }>Часто задаваемые вопросы</NavLink>
                 </div>
 
                 <div className="social-links">
-                    <a href="#"><img src={ LinkedinIcon } alt="Linkedin icon" /></a>
-                    <a href="#"><img src={ InstagramIcon } alt="Instagram icon" /></a>
+                    <a href="https://www.linkedin.com/company/colibri-development-company/" target="_blank"><img src={ LinkedinIcon } alt="Linkedin icon" /></a>
+                    <a href="https://www.instagram.com/colibridevcom/" target="_blank"><img src={ InstagramIcon } alt="Instagram icon" /></a>
                     <a href="#"><img src={ TelegramIcon } alt="Telegram icon" /></a>
                 </div>
             </div>
