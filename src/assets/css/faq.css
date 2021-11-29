@@ -1,10 +1,11 @@
 body {
     background-color: #3F2861;
+    box-sizing: border-box;
 }
 
 .faq {
     max-width: 1200px;
-    height: 240px;
+    width: 90%;
     margin-bottom: 71px;
     transition: all .25s;
     position: relative;
@@ -28,6 +29,7 @@ body {
 }
 
 .faq-content {
+    box-sizing: border-box;
     z-index: 10;
     position: relative;
     width: 100%;
@@ -42,7 +44,7 @@ body {
     padding-bottom: 67px;
     padding-left: 150px;
     padding-right: 150px; */
-    padding: 57px 150px 67px;
+    padding: 57px 40px 67px;
     transition: all .25s;
 }
 
@@ -55,10 +57,6 @@ body {
 .question-arrow.open {
     transform: rotate(180deg);
     /* transition: all .25s; */
-}
-
-.faq.open {
-    height: 700px; 
 }
 
 .faq-bg {

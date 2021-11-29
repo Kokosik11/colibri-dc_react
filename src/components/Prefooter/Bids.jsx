@@ -78,7 +78,7 @@ const Bids = () => {
                 <div className="bids-forms">
                     <div className="error-handler">{ error }</div>
                     <div className="bids-contacts">
-                        <div class="bids-input">
+                        <div className="bids-input">
                             <label htmlFor="email">Ваш email*</label>
                             <input 
                                 id="email"
@@ -89,7 +89,7 @@ const Bids = () => {
                             />
                         </div>
 
-                        <div class="bids-input">
+                        <div className="bids-input">
                             <label htmlFor="username">Ваше имя*</label>
                             <input 
                                 id="username"
