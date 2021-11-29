@@ -1,0 +1,7 @@
+.roadmap-block {
+    max-width: 1392px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
