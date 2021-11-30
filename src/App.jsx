@@ -10,6 +10,7 @@ import {  Header,Footer, Burger } from './components';
 
 import Main from './views/main.jsx';
 import Faqpage from './views/faqpage.jsx';
+import Roadmap from './views/roadmap.jsx';
 
 const App = () => {
   const [ isBurgerOpened, setIsBurgerOpened ] = useState(false);
@@ -46,6 +47,9 @@ const App = () => {
       <Switch>
         <Route exec path='/home'>
           <Main />
+        </Route>
+        <Route path='/roadmap'>
+          <Roadmap />
         </Route>
         <Route path='/faq'>
           <Faqpage />
