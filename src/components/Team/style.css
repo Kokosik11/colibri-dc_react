@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 990px;
+    max-width: 840px;
     width: 100%;
     padding-top: 60px;
 }
@@ -21,8 +21,8 @@
 .team-title h2 {
     font-weight: bold;
     font-size: 80px;
-    text-shadow: 0px 0px 64px #E543FF;
-    background: linear-gradient(#E440FF 50%, rgba(159, 70, 255, 0.6) 100%);
+    text-shadow: 0px 0px 64px #4D54FF;
+    background: linear-gradient(#4D54FF 50%, #2A30C0 100%);
     text-transform: uppercase;
     background-clip: text;
     -webkit-background-clip: text;
@@ -32,7 +32,64 @@
 .team-title .prefix {
     width: 57px;
     height: 11px;
-    background-color: #B500FF;
+    background-color: #4D54FF;
     border-radius: 2px;
-    box-shadow: 0 0 20px #B500FF;
+    box-shadow: 0 0 20px #4D54FF;
+}
+
+.team-content {
+    max-width: 1220px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 70px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member__name {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 125.6%;
+    color: #FFFFFF;
+    margin-top: 34px;
+}
+
+.team-member__position {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 125.6%;
+    color: #4D54FF;
+    margin-top: 26px;
+}
+
+.team button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #C4C4C4 -0.47%, #7038FF -0.46%, #9B45C4 37.93%, #4D54FF 100%);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 18px 62px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.team button:hover {
+    box-shadow: 0px 0px 15px #864AD4;
+}
+
+.team button a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 125.6%;
+    color: #FFFFFF;
 }
