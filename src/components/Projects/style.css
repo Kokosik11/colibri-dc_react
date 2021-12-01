@@ -22,8 +22,8 @@
 .projects-title h2 {
     font-weight: bold;
     font-size: 80px;
-    text-shadow: 0px 0px 64px #E543FF;
-    background: linear-gradient(#E440FF 50%, rgba(159, 70, 255, 0.6) 100%);
+    text-shadow: 0px 0px 64px #4D54FF;
+    background: linear-gradient(#9B4DFF 50%, #7100FF 100%);
     text-transform: uppercase;
     background-clip: text;
     -webkit-background-clip: text;
@@ -33,9 +33,9 @@
 .projects-title .prefix {
     width: 57px;
     height: 11px;
-    background-color: #B500FF;
+    background-color: #4D54FF;
     border-radius: 2px;
-    box-shadow: 0 0 20px #B500FF;
+    box-shadow: 0 0 20px #4D54FF;
 }
 
 .projects-content {
