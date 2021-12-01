@@ -1,7 +1,8 @@
 .prefooter {
     width: 100%;
     height: 615px;
-    background: linear-gradient(180deg, #6920A3 0%, #2E4D7C 100%);
+    background: linear-gradient(180deg, #453D8C 21.92%, #2E4D7C 53.99%);
+    /* background: linear-gradient(180deg, #6920A3 0%, #2E4D7C 100%); */
     display: flex;
     justify-content: center;
     padding-top: 60px;

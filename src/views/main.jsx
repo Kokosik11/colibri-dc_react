@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 
 import {  Mainpage,
-          Service, Whyus, Projects, 
+          Service, Whyus, Team, Projects, 
           Prefooter } from '../components';
 
 function Main() {
@@ -20,8 +20,9 @@ function Main() {
   return (
     <main className="App">
         <Mainpage articleRef={ refScroll } />
-        <Whyus />
         <Service />
+        <Whyus />
+        <Team />
         <Projects setRefScroll={ setRefScrollFuncion } />
         <Prefooter />
 

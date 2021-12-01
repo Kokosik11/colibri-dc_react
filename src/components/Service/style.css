@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg, #6C1BAD 16.96%, #673F84 100%);
+    background: linear-gradient(180deg, #422A63 0%, #563174 55.03%, #180F2E 97.42%);
+    /* background: linear-gradient(180deg, #422A63 0%, #563174 56.77%, #6B1BAC 100%); */
     /* background: linear-gradient(180deg, #422A63 0%, #563174 56.77%, #6B1BAC 100%); */
     overflow: hidden;
     padding: 0 20px;

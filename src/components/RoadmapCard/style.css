@@ -17,6 +17,16 @@
     padding-bottom: 63px;
 }
 
+.card-block__front.reversed {
+    flex-direction: column-reverse;
+}
+
+.card-block__front.reversed .card-block__front__title {
+    padding-left: 78px;
+    margin-bottom: 0;
+    margin-top: 36px;
+}
+
 .number {
     font-weight: bold;
     font-size: 20px;

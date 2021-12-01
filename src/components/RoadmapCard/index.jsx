@@ -4,7 +4,7 @@ import "./style.css";
 const RoadmapCard = (props) => {
     return (
         <div className="card-block">
-            <div className="card-block__front">
+            <div className={`card-block__front ${props.card.class ? props.card.class : "" }`}>
                 <div className="card-block__front__title">
                     <span className="number">0{props.card.id}.</span>
                     <span className="title">{props.card.title}</span>
