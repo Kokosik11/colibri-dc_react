@@ -55,11 +55,10 @@ const Footer = ({color = "blue"}) => {
                 </div>
 
                 <div className="footer-links">
-                    <LinkList title="Colibri" className="links-group">
-                        <CLink href="#">Наши услуги</CLink>
-                        <CLink href="#">Принципы</CLink>
+                    <LinkList title="О нас" className="links-group">
+                        <CLink href="#">Вопрос-ответ</CLink>
+                        <CLink href="#">Разработка</CLink>
                         <CLink href="#">Партнеры</CLink>
-                        <CLink href="#">Проекты</CLink>
                     </LinkList>
 
                     <LinkList title="Соискатели" className="links-group">
@@ -70,7 +69,7 @@ const Footer = ({color = "blue"}) => {
                     <LinkList title="Документы" className="links-group">
                         <CLink href="#">Публичная оферта</CLink>
                         <CLink href="#">Политика конфиденциальности</CLink>
-                        <CLink href="#">Регистрация</CLink>
+                        <CLink href="#">Государственная регистрация</CLink>
                     </LinkList>
                 </div>
 
