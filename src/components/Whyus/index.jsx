@@ -1,17 +1,39 @@
 import "./style.css";
 
-import ListIcon from "../../assets/imgs/list.png";
-import Sphere from "../../assets/imgs/gb-circle.png";
-import SphereSmall from "../../assets/imgs/bg-circle-s.png";
+import PlanetBlue from "../../assets/imgs/planets/planet-blue.svg";
+import PlanetPurple from "../../assets/imgs/planets/planet-purple.svg";
+import PlanetPink from "../../assets/imgs/planets/planet-pink.svg";
+import PlanetYellow from "../../assets/imgs/planets/planet-yellow.svg";
 
-const ListGroup = props => <div className={props.className}>{props.children}</div> 
+import IconFire from "../../assets/imgs/planets/icon-fire.svg";
+import IconLightning from "../../assets/imgs/planets/icon-lightning.svg";
+import IconRuby from "../../assets/imgs/planets/icon-ruby.svg";
+import IconHeart from "../../assets/imgs/planets/icon-heart.svg";
 
-const List = props => (
-    <div className={props.className}>
-        <img src={ListIcon} alt="List icon" />
-        {props.children}
-    </div>
-)
+import SunImg from "../../assets/imgs/planets/sun.svg";
+
+let planets = [
+    { id: 0, title: "Planet Blue", hiddenText: "Конкурентная стоимость", image: PlanetBlue, icon: IconFire },
+    { id: 1, title: "Planet Purple", hiddenText: "Скорость разработки", image: PlanetPurple, icon: IconLightning },
+    { id: 2, title: "Planet Pink", hiddenText: "Индивидуальность", image: PlanetPink, icon: IconRuby },
+    { id: 3, title: "Planet Yellow", hiddenText: "Поддержка", image: PlanetYellow, icon: IconHeart },
+]
+
+const Planet = (props) => {
+
+    return (
+        <div className="planet">
+            <div className="planet-image">
+                <img src={props.image} alt={props.title}/>
+            </div>
+
+            <div class="planet-title">
+                <img src={props.icon} alt={`${props.title} Icon`} />
+                <span>{props.hiddenText}</span>
+            </div>
+        </div>
+    )
+}
 
 const Whyus = () => {
     return (
@@ -24,17 +46,13 @@ const Whyus = () => {
             <div className="why-us_content">
                 <div className="why-us_text">Мы проектируем и создаем digital решения, которые нужны клиентам.</div>
                 <div className="why-us_pink">И мы весьма хороши в своем деле</div>
-
-                <ListGroup className="why-us_list">
-                    <List>Скорость разработки</List>
-                    <List>Индивидуальность</List>
-                    <List>Поддержка</List>
-                </ListGroup>
             </div>
 
-            <img className="sphere-small" src={SphereSmall} alt="Background circle" />
-            <img className="sphere" src={Sphere} alt="Background circle" />
-
+            <div className="planets">
+                { planets.map(planet => (
+                    <Planet {...planet} />
+                )) }
+            </div>
         </section>
     )
 }

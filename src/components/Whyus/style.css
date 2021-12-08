@@ -24,8 +24,8 @@
 .why-us_title h2 {
     font-weight: bold;
     font-size: 80px;
-    text-shadow: 0px 0px 64px #7900FF;
-    background: linear-gradient(#9031FF 0%, #9f46ff7a 100%);
+    text-shadow: 0px 0px 64px #9031FF;
+    background: linear-gradient(#9031FF 0%, #9F46FF 80%);
     text-transform: uppercase;
     background-clip: text;
     -webkit-background-clip: text;
@@ -35,9 +35,9 @@
 .why-us_title .prefix {
     width: 57px;
     height: 11px;
-    background-color: #B500FF;
+    background-color: #9031FF;
     border-radius: 2px;
-    box-shadow: 0 0 20px #B500FF;
+    box-shadow: 0 0 20px #9031FF;
 }
 
 .why-us_list {
@@ -74,6 +74,7 @@
 }
 
 .why-us_pink {
+    text-shadow: 0px 0px 64px #E543FF;
     background: linear-gradient(#A001E1 0%, #B230F2 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -93,6 +94,118 @@
     position: absolute;
     top: 291px;
     left: 0;
+}
+
+.planet {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 202px;
+    -webkit-animation: onanism 2s linear infinite;
+    -moz-animation: onanism 2s linear infinite;
+    animation: onanism 2s linear infinite;
+}
+
+.planet:nth-child(1) {
+    top: 330px;
+    left: 267px;
+}
+
+.planet:nth-child(2) {
+    top: 518px;
+    left: 580px;
+}
+
+.planet:nth-child(3) {
+    top: 597px;
+    left: 920px;
+}
+
+.planet:nth-child(4) {
+    top: 445px;
+    left: 1185px;
+}
+
+@keyframes onanism {
+    0% { 
+        transform: translateY(0);
+    }
+
+    50% { 
+        transform: translateY(-20px);
+    }
+
+    100% { 
+        transform: translateY(0);
+    }
+}
+
+.planet-image {
+    position: relative;
+    transition: 0.5s;
+}
+
+.planet-image img {
+    box-sizing: border-box;
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+}
+
+.planet-image:hover::before {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.planet-image:hover img {
+    box-shadow: 0px 0px 144px #00C4EF;
+}
+
+.planet-image::before {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 216px;
+    height: 216px;
+    border-radius: 100%;
+    opacity: 0;
+    border: 2px dashed #63B4FF;
+    -webkit-animation:spin 60s linear infinite;
+    -moz-animation:spin 60s linear infinite;
+    animation: spin 60s linear infinite;
+    transition: 0.5s;
+}
+
+.planet-title {
+    margin-left: 50px;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+.planet-title {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.planet-image:hover ~ .planet-title {
+    opacity: 1;
+    transition: 0.5s;
 }
 
 @media (max-width: 1397px) {
