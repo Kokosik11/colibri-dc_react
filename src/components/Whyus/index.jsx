@@ -1,7 +1,9 @@
 import "./style.css";
+import "../../assets/sass/stars.sass";
+import "../../assets/css/meteors.css";
 
 import PlanetBlue from "../../assets/imgs/planets/planet-blue.svg";
-import PlanetPurple from "../../assets/imgs/planets/planet-purple.svg";
+import PlanetPurple from "../../assets/imgs/planets/star.svg";
 import PlanetPink from "../../assets/imgs/planets/planet-pink.svg";
 import PlanetYellow from "../../assets/imgs/planets/planet-yellow.svg";
 
@@ -38,6 +40,18 @@ const Planet = (props) => {
 const Whyus = () => {
     return (
         <section className="why-us">
+            <div className="stars-wrapper">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+            </div>
+
+            <div className="meteor-wrapper">
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+            </div>
+            
             <div className="why-us_title">
                 <div className="prefix"></div>
                 <h2>Почему колибри</h2>

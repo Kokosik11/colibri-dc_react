@@ -96,6 +96,13 @@
     left: 0;
 }
 
+.planets {
+    position: relative;
+    max-width: 1078px;
+    width: 100%;
+    min-height: 427px; 
+}
+
 .planet {
     position: absolute;
     display: flex;
@@ -104,26 +111,134 @@
     -webkit-animation: onanism 2s linear infinite;
     -moz-animation: onanism 2s linear infinite;
     animation: onanism 2s linear infinite;
+    transition: .5s;
 }
 
 .planet:nth-child(1) {
-    top: 330px;
-    left: 267px;
+    top: 0;
+    left: 0;
 }
 
 .planet:nth-child(2) {
-    top: 518px;
-    left: 580px;
+    top: 200px;
+    left: 300px;
 }
 
 .planet:nth-child(3) {
-    top: 597px;
-    left: 920px;
+    top: 320px;
+    left: 600px;
 }
 
 .planet:nth-child(4) {
-    top: 445px;
-    left: 1185px;
+    top: 150px;
+    left: 850px;
+}
+
+@media (max-width: 1533px) {
+    .planet .planet-title span {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .planet .planet-title img {
+        max-width: 30px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .why-us {
+        height: auto;
+    }
+
+    .planets {
+        width: 40%;
+        height: 950px; 
+        margin-top: 100px;
+    }
+
+    .planet:nth-child(1) {
+        top: 0;
+        left: 0;
+    }
+    
+    .planet:nth-child(2) {
+        top: 200px;
+        left: 300px;
+    }
+    
+    .planet:nth-child(3) {
+        top: 420px;
+        left: 0px;
+    }
+    
+    .planet:nth-child(4) {
+        top: 640px;
+        left: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .planets {
+        width: 100%;
+    }
+}
+
+@media (max-width: 715px) {
+    .planets {
+        height: 1100px;
+    }
+
+    .planet:nth-child(1) {
+        top: 0;
+        left: 0;
+    }
+    
+    .planet:nth-child(2) {
+        top: 250px;
+        left: 0;
+    }
+    
+    .planet:nth-child(3) {
+        top: 500px;
+        left: 0px;
+    }
+    
+    .planet:nth-child(4) {
+        top: 750px;
+        left: 0px;
+    }
+}
+
+.planet:nth-child(1) .planet-title img {
+    filter: drop-shadow(0 0 10px #FF8B02);
+}
+
+.planet:nth-child(2) .planet-title img {
+    filter: drop-shadow(0 0 10px #F8E645);
+}
+
+.planet:nth-child(3) .planet-title img {
+    filter: drop-shadow(0 0 10px #E81212);
+}
+
+.planet:nth-child(4) .planet-title img {
+    filter: drop-shadow(0 0 10px #E81212);
+}
+
+.planet:nth-child(1) .planet-image:hover img {
+    filter: drop-shadow(0px 0px 74px #00C4EF);
+}
+
+.planet:nth-child(2) .planet-image:hover img {
+    filter: drop-shadow(0px 0px 74px #CB45EC);
+}
+
+.planet:nth-child(3) .planet-image:hover img {
+    filter: drop-shadow(0px 0px 74px #B20F67);
+}
+
+.planet:nth-child(4) .planet-image:hover img {
+    filter: drop-shadow(0px 0px 74px #A5B20F);
 }
 
 @keyframes onanism {
@@ -143,13 +258,16 @@
 .planet-image {
     position: relative;
     transition: 0.5s;
+
 }
 
 .planet-image img {
     box-sizing: border-box;
     width: 166px;
     height: 166px;
-    border-radius: 50%;
+    border-radius: 100%;
+    box-shadow: 0px 0px 144px #6e9ba500;
+    transition: 0.5s;
 }
 
 .planet-image:hover::before {
@@ -158,7 +276,7 @@
 }
 
 .planet-image:hover img {
-    box-shadow: 0px 0px 144px #00C4EF;
+    transition: 0.5s;
 }
 
 .planet-image::before {
@@ -180,6 +298,14 @@
 
 .planet-title {
     margin-left: 50px;
+    font-weight: 500;
+    font-size: 25px;
+    max-width: 248px;
+    color: #8280FF;
+}
+
+.planet-title span {
+    margin-left: 25px;
 }
 
 @-moz-keyframes spin { 
