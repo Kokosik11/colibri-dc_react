@@ -190,22 +190,22 @@
 
     .planet:nth-child(1) {
         top: 0;
-        left: 0;
+        left: -75px;
     }
     
     .planet:nth-child(2) {
         top: 250px;
-        left: 0;
+        left: -75px;
     }
     
     .planet:nth-child(3) {
         top: 500px;
-        left: 0px;
+        left: -75px;
     }
     
     .planet:nth-child(4) {
         top: 750px;
-        left: 0px;
+        left: -75px;
     }
 }
 
@@ -322,7 +322,7 @@
     }
 }
 
-.planet-title {
+.planets .planet-title {
     display: flex;
     align-items: center;
     opacity: 0;
@@ -334,42 +334,23 @@
     transition: 0.5s;
 }
 
-@media (max-width: 1397px) {
-    .sphere {
-        right: -100px;
-    }
-    .sphere-small {
-        left: -50px;
-    }
+.hidden-text {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+    margin: 150px 0 400px;
 }
 
-@media (max-width: 1287px) {
-    .sphere {
-        right: -200px;
-    }
-    .sphere-small {
-        left: -150px;
-    }
+.hidden-text .planet-title {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    opacity: 1;
 }
-
-@media (max-width: 1067px) {
-    .sphere {
-        right: -300px;
-    }
-    .sphere-small {
-        left: -250px;
-    }
-}
-
-@media (max-width: 910px) {
-    .sphere {
-        display: none;
-    }
-    .sphere-small {
-        display: none;
-    }
-}
-
 
 @media (max-width: 877px) {
     .why-us_title {
@@ -413,8 +394,22 @@
     }
 }
 
+@media (max-width: 400px) {
+    .planets {
+        display: none;
+    }
+
+    .hidden-text {
+        display: flex;
+    }
+}
+
 @media (max-width: 367px) {
     .why-us_title .prefix {
         display: none;
+    }
+
+    .hidden-text .planet-title span {
+        font-size: 16px;
     }
 }

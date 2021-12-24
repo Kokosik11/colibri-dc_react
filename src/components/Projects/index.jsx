@@ -32,7 +32,7 @@ const Projects = props => {
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
         setError("");
 
-        fetch("/project", {
+        fetch("http://localhost:3010/project", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -57,6 +57,9 @@ const Projects = props => {
         .then(() => {
             console.log(projectData)
         })
+        .catch(error => {
+            setError(genericErrorMessage);
+        })
     }, [])
 
     const articleRef = useRef()
@@ -69,10 +72,8 @@ const Projects = props => {
         setWindowWidth(window.innerHeight);
     })
 
-
     useEffect(() => {
         setRefObject(props.setRefScroll(handleClick))
-
     }, [refObject])
 
     return (
@@ -88,7 +89,6 @@ const Projects = props => {
             <div className="projects-content">
                 <Swiper 
                     slidesPerView={3} 
-                    spaceBetween={93}
                     loop={true} 
                     autoplay={{
                         "delay": 6000,
@@ -104,7 +104,7 @@ const Projects = props => {
                     { projectData.map(project => (
                         <SwiperSlide key={project._id}>
                             <ProjectCard 
-                                img={ `/src/assets/imgs/projects/${ project.imageURL }`}
+                                img={ `http://localhost:3010/${project.imageURL}` }
                                 alt={ project.title }
                                 title={ project.title }
                                 href={ project.link }

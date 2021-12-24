@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import validator from 'validator';
 
 import "./style.css"
 
 import Telegram from '../../assets/imgs/Telegram.svg';
 
-const Bids = () => {
+const Bids = (props) => {
     const [ email, setEmail ] = useState('');
     const [ userName, setUserName ] = useState('');
     const [ isPersonalData, setPersonalData ] = useState(false);
+    const [ refObject, setRefObject ] = useState({});
     const [ error, setError ] = useState('');
 
     const handleButtonClick = () => {
@@ -25,6 +26,7 @@ const Bids = () => {
         // if(!phoneNumber.match(/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/)) {
         //     return setError('Некорректный номер телефона');
         // }
+
 
         let bidBody = {
             email,
@@ -47,12 +49,22 @@ const Bids = () => {
         })
     }
 
+    const bidsRef = useRef();
+
+    function handleClick() {
+        bidsRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    useEffect(() => {
+        setRefObject(props.setRefScroll(handleClick))
+    }, [refObject])
+
     const handleTelegramButtonClick = (e) => {
         e.preventDefault();
     }
 
     return (
-        <aside className="bids">
+        <aside ref={ bidsRef } id="bids" className="bids">
             <div className="bids-recursive first"></div>
             <div className="bids-recursive second"></div>
             <div className="bids-content">

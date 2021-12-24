@@ -7,7 +7,7 @@ import Kirill from '../../assets/imgs/team-photos/kirill.png';
 import Tim from '../../assets/imgs/team-photos/tim.png'
 import Kostya from '../../assets/imgs//team-photos/konstantin.png';
 
-const Team = props => {
+const Team = ({ articleRef }) => {
 
     const [members, setMembers] = useState([
         {id: 1, name: 'Михаил', position: "CEO", image: Michail},
@@ -15,6 +15,10 @@ const Team = props => {
         {id: 3, name: 'Тимофей', position: "Backend Engineer", image: Tim},
         {id: 4, name: 'Константин', position: "Frontend Engineer", image: Kostya},
     ])
+
+    const handleJobButtonClick = () => {
+        articleRef.handleClick();
+    }
 
     return (
         <section id="team" className="team">
@@ -27,7 +31,7 @@ const Team = props => {
                 <TeamMember member={member} key={member.id}/>
             )}
             </div>
-            <button><a href="#">Заказать работу</a></button>
+            <button onClick={handleJobButtonClick}>Заказать работу</button>
         </section>
     )
 }

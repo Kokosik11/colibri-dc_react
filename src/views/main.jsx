@@ -7,13 +7,22 @@ import {  Mainpage,
 
 function Main() {
   const [ refScroll, setRefScroll ] = useState({});
+  const [ refBidsScroll, setRefBidsScroll ] = useState({});
 
-  const setRefScrollFuncion = (handleClick) => {
+  const setRefScrollFunction = (handleClick) => {
     setRefScroll({
       handleClick
     })
 
     console.log(refScroll)
+  }
+
+  const setRefBidsScrollFunction = (handleClick) => {
+    setRefBidsScroll({
+      handleClick
+    })
+
+    console.log(refBidsScroll)
   }
 
 
@@ -22,9 +31,9 @@ function Main() {
         <Mainpage articleRef={ refScroll } />
         <Service />
         <Whyus />
-        <Team />
-        <Projects setRefScroll={ setRefScrollFuncion } />
-        <Prefooter />
+        <Team articleRef={ refBidsScroll } />
+        <Projects setRefScroll={ setRefScrollFunction } />
+        <Prefooter setRefScroll={ setRefBidsScrollFunction } />
 
         <Footer />
 

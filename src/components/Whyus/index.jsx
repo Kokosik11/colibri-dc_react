@@ -29,7 +29,7 @@ const Planet = (props) => {
                 <img src={props.image} alt={props.title}/>
             </div>
 
-            <div class="planet-title">
+            <div className="planet-title">
                 <img src={props.icon} alt={`${props.title} Icon`} />
                 <span>{props.hiddenText}</span>
             </div>
@@ -47,9 +47,9 @@ const Whyus = () => {
             </div>
 
             <div className="meteor-wrapper">
-                <div class="meteor"></div>
-                <div class="meteor"></div>
-                <div class="meteor"></div>
+                <div className="meteor"></div>
+                <div className="meteor"></div>
+                <div className="meteor"></div>
             </div>
             
             <div className="why-us_title">
@@ -64,8 +64,17 @@ const Whyus = () => {
 
             <div className="planets">
                 { planets.map(planet => (
-                    <Planet {...planet} />
+                    <Planet key={planet.id} {...planet} />
                 )) }
+            </div>
+
+            <div className="hidden-text">
+                { planets.map(planet => (
+                    <div key={planet.id} className="planet-title">
+                        <img src={planet.icon} alt={`${planet.title} Icon`} />
+                        <span>{planet.hiddenText}</span>
+                    </div>
+                ))}
             </div>
         </section>
     )

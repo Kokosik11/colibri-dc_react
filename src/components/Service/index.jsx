@@ -26,7 +26,7 @@ const Service = () => {
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
         setError("");
 
-        fetch("/service", {
+        fetch("http://localhost:3010/service", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -50,6 +50,9 @@ const Service = () => {
         })
         .then(() => {
             console.log(serviceData)
+        })
+        .catch(error => {
+            setError(genericErrorMessage);
         })
     }, [])
 
