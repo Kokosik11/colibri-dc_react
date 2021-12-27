@@ -124,11 +124,12 @@
 .navigation {
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 286px;
     height: 55px;
     background: #562CBA;
     border-radius: 40px;
+    padding: 0 25px;
 }
 
 .navigation .bl-btn {
@@ -225,7 +226,7 @@
 
 .burger-content_right .phone {
     display: flex;
-    max-width: 211px;
+    max-width: 251px;
     width: 100%;
     justify-content: space-between;
     align-items: center;

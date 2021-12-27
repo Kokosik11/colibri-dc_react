@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 61px;
+    width: 100%;
 }
 
 .card-block__front {
@@ -10,6 +11,7 @@
     flex-direction: column;
     background: #553880;
     border-radius: 8px;
+    width: 100%;
 
     padding-right: 39px;
     padding-left: 39px;
@@ -38,7 +40,6 @@
 .title {
     font-weight: 600;
     font-size: 28px;
-    line-height: 34px;
     color: #F3F3F3;
 }
 
@@ -55,5 +56,28 @@
     font-size: 20px;
     line-height: 24px;
     color: #8C65C5;
-    max-width: 507px;
+    width: 100%;
 }
+
+@media (max-width: 590px) {
+    .card-block__front__title {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 390px) {
+    .card-block__front__title .title {
+        font-size: 24px;
+    }
+} 
+
+@media (max-width: 345px) {
+    .card-block__front__title .title {
+        font-size: 18px;
+    }
+
+    .card-block__front__description {
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+} 

@@ -47,7 +47,7 @@
 
 .colibri-social ul {
     margin-top: 65px;
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -55,7 +55,7 @@
 
 .footer-links {
     margin: 20px 15px 0;
-    max-width: 636px;
+    max-width: 500px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -134,6 +134,7 @@
     .footer-links {
         flex-direction: column;
         width: auto;
-        height: 460px;
+        height: 300px;
+        flex-wrap: nowrap;
     }
 }

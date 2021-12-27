@@ -32,7 +32,7 @@ const Projects = props => {
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
         setError("");
 
-        fetch("http://localhost:3010/project", {
+        fetch("api/project", {
             method: "GET",
             credentials: "include",
             headers: {
@@ -104,7 +104,7 @@ const Projects = props => {
                     { projectData.map(project => (
                         <SwiperSlide key={project._id}>
                             <ProjectCard 
-                                img={ `http://localhost:3010/${project.imageURL}` }
+                                img={ `${project.imageURL}` }
                                 alt={ project.title }
                                 title={ project.title }
                                 href={ project.link }

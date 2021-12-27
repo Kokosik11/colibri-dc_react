@@ -93,10 +93,9 @@ const LeftContent = props => {
                     <div className="burger-left_block">
                         {!navigationBtn && 
                         <LinkGroup className="bl-links">
-                            <NavLink to="/" onClick={ props.onBurgerOpen }>О компании</NavLink>
                             <NavLink to="/" onClick={ props.onBurgerOpen }>Портфолио</NavLink>
                             <NavLink to="/" onClick={ props.onBurgerOpen }>Услуги</NavLink>
-                            <NavLink to="/" onClick={ props.onBurgerOpen }>Этапы разработки</NavLink>
+                            <NavLink to="/roadmap" onClick={ props.onBurgerOpen }>Этапы разработки</NavLink>
                         </LinkGroup>
                         }
 
@@ -107,7 +106,7 @@ const LeftContent = props => {
                         }
                         <footer>
                             <div className="bl-footer">
-                                <Link to="/" onClick={ props.onBurgerOpen }>Свидетельство о регистрации</Link>
+                                <Link to="/documents" onClick={ props.onBurgerOpen }>Свидетельство о регистрации</Link>
                                 <div className="bl-dot"></div>
                                 <Link to="/" onClick={ props.onBurgerOpen }>Карта сайта</Link>
                             </div>
@@ -127,7 +126,7 @@ const RightContent = props => {
                 <div className="burger_header-content">
                     <div className="phone">
                         <img src={ Phone } alt="Phone icon" />
-                        <a href="tel:+375295448533" className="number">375 29 544 85 33</a>
+                        <a href="tel:+375447662458" className="number">+375 (44) 766-24-58</a>
                     </div>
 
                     <div className="close" onClick={ props.onBurgerOpen }>
@@ -144,7 +143,7 @@ const RightContent = props => {
                 </div>
 
                 <div className="burger-info">
-                    <NavLink to="/" onClick={ props.onBurgerOpen }>Почему нанять веб-агенство для своего проекта - это круто?</NavLink>
+                    {/* <NavLink to="/" onClick={ props.onBurgerOpen }>Почему нанять веб-агенство для своего проекта - это круто?</NavLink> */}
                 </div>
                 <div className="burger-faq">
                     <NavLink to="/faq" onClick={ props.onBurgerOpen }>Часто задаваемые вопросы</NavLink>
@@ -208,13 +207,13 @@ const Burger = props => {
 
     return width > 1100 ? (
         <div className={props.className}>
-            <LeftContent className="burger-content_left" />
+            <LeftContent className="burger-content_left" onBurgerOpen={ props.onBurgerOpen } />
             <RightContent className="burger-content_right" onBurgerOpen={ props.onBurgerOpen } />
         </div>
     ) : (
         <div className={ props.className }>
             <Swiper pagination={true} className="mySwiper">
-                <SwiperSlide><LeftContent Arrow={ Arrow } className="burger-content_left" /></SwiperSlide>
+                <SwiperSlide><LeftContent Arrow={ Arrow } className="burger-content_left" onBurgerOpen={ props.onBurgerOpen } /></SwiperSlide>
                 <SwiperSlide><RightContent className="burger-content_right" onBurgerOpen={ props.onBurgerOpen } /></SwiperSlide>
             </Swiper>
         </div>

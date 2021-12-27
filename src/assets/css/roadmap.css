@@ -1,7 +1,19 @@
 .roadmap-block {
-    max-width: 1392px;
+    max-width: 1092px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
 }
+
+@media (max-width: 490px) {
+    .h1-faq {
+        font-size: 38px;
+    }
+} 
+
+@media (max-width: 330px) {
+    .h1-faq {
+        font-size: 32px;
+    }
+} 

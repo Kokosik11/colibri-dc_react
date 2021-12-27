@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 
-import {  Header,Footer, Burger } from './components';
+import {  Header, Footer, Burger } from './components';
 
 import Main from './views/main.jsx';
 import Faqpage from './views/faqpage.jsx';
@@ -46,9 +46,7 @@ const App = () => {
       <Header onBurgerOpen={ handleBurgerOpenButtonClick } />
       { isBurgerOpened ? <Burger onBurgerOpen={ handleBurgerCloseButtonClick } className='burger' /> : null }
       <Switch>
-        <Route exec path='/home'>
-          <Main />
-        </Route>
+        
         <Route path='/documents'>
           <Documents />
         </Route>
@@ -58,8 +56,11 @@ const App = () => {
         <Route path='/faq'>
           <Faqpage />
         </Route>
+        <Route exec path='/'>
+          <Main />
+        </Route>
 
-        <Redirect from='/' to='/home' />
+        {/* <Redirect from='/' to='/home' /> */}
       </Switch>
     </div>
   )

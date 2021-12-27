@@ -19,7 +19,7 @@
 .document__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 30px 30px;
     height: 550px;
@@ -27,7 +27,6 @@
 
 .document__content img {
     max-width: 100%;
-    margin-bottom: 100px;
 }
 
 .extension {
@@ -58,7 +57,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 100px;
 }
 
 .document-footer .cta a {
@@ -77,4 +75,38 @@
 
 .document-footer .cta a:hover {
     text-shadow: 0px 0px 7px rgba(178, 134, 255, 0.5);
+}
+
+@media (max-width: 464px) {
+    .document__title {
+        max-width: none;
+    }
+
+    .document {
+        width: 100%;
+    }
+}
+
+@media (max-width: 415px) {
+    .document__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    .document__title {
+        font-size: 18px;
+    }
+
+    .document__content img {
+        max-width: 50%;
+    }
+
+    .document__content {
+        max-height: 350px;
+    }
+
+    .document-footer .cta a {
+        font-size: 12px;
+    }
 }

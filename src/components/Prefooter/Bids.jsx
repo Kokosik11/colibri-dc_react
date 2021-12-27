@@ -33,7 +33,7 @@ const Bids = (props) => {
             username: userName
         }
 
-        fetch("/bid/create", {
+        fetch("api/bid/create", {
             method: "POST",
             credentials: "include",
             headers: {
@@ -76,10 +76,10 @@ const Bids = (props) => {
                     Colibri Development Company
                 </div>
 
-                <button className="telegram-send" onClick={handleTelegramButtonClick}>
+                <a href="https://t.me/MikhailColibri" target="_blank" className="telegram-send">
                     <img src={Telegram} alt="Telegram icon"/>
                     <span>Написать</span>
-                </button>
+                </a>
 
                 <div className="or-email">
                     <div className="hline"></div>

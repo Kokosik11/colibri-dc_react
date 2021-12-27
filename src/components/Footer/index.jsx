@@ -1,5 +1,7 @@
 import './style.css';
 
+import { Link, NavLink } from "react-router-dom";
+
 import Logo from '../../assets/imgs/colibri-logo_footer.png';
 import LogoPink from '../../assets/imgs/colibri-logo.png';
 
@@ -44,32 +46,32 @@ const Footer = ({color = "blue"}) => {
                     </div>
                     <div className="colibri-social">
                         <ul>
-                            <li><a href="#"><img src={ TwitterIcon } alt="Twitter icon" /></a></li>
-                            <li><a href="#"><img src={ FacebookIcon } alt="Facebook icon" /></a></li>
-                            <li><a href="#"><img src={ InstagramIcon } alt="Instagram icon" /></a></li>
-                            <li><a href="#"><img src={ TiktokIcon } alt="Tiktok icon" /></a></li>
-                            <li><a href="#"><img src={ VkIcon } alt="vk icon" /></a></li>
-                            <li><a href="#"><img src={ LinkedinIcon } alt="Linkening icon" /></a></li>
+                            {/* <li><a href="#"><img src={ TwitterIcon } alt="Twitter icon" /></a></li> */}
+                            {/* <li><a href="#"><img src={ FacebookIcon } alt="Facebook icon" /></a></li> */}
+                            <li><a href="https://www.instagram.com/colibridevcom/" target="_blank"><img src={ InstagramIcon } alt="Instagram icon" /></a></li>
+                            {/* <li><a href="#"><img src={ TiktokIcon } alt="Tiktok icon" /></a></li> */}
+                            <li><a><img src={ VkIcon } alt="vk icon" /></a></li>   
+                            <li><a href="https://www.linkedin.com/company/colibri-development-company" target="_blank"><img src={ LinkedinIcon } alt="Linkening icon" /></a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="footer-links">
                     <LinkList title="О нас" className="links-group">
-                        <CLink href="#">Вопрос-ответ</CLink>
-                        <CLink href="#">Разработка</CLink>
-                        <CLink href="#">Партнеры</CLink>
+                        <li><Link to="/faq">Вопрос-ответ</Link></li>
+                        <li><Link to="/roadmap">Разработка</Link></li>
+                        {/* <CLink href="#">Партнеры</CLink> */}
                     </LinkList>
 
-                    <LinkList title="Соискатели" className="links-group">
+                    {/* <LinkList title="Соискатели" className="links-group">
                         <CLink href="#">Вакансии</CLink>
                         <CLink href="#">О компании</CLink>
-                    </LinkList>
+                    </LinkList> */}
 
                     <LinkList title="Документы" className="links-group">
-                        <CLink href="#">Публичная оферта</CLink>
-                        <CLink href="#">Политика конфиденциальности</CLink>
-                        <CLink href="#">Государственная регистрация</CLink>
+                        <li><Link to="/documents">Публичная оферта</Link></li>
+                        <li><Link to="/documents">Политика конфиденциальности</Link></li>
+                        <li><Link to="/documents">Государственная регистрация</Link></li>
                     </LinkList>
                 </div>
 
