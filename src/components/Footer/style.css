@@ -1,0 +1,140 @@
+.footer {
+    width: 100%;
+    min-height: 328px;
+}
+
+.footer.blue { 
+    background-color: #20395F;
+}
+
+.footer.pink { 
+    background-color: #3A2558;
+}
+
+.footer-content .colibri-logo {
+    display: flex;
+    align-items: center;
+    max-width: 180px;
+}
+
+.footer-content .colibri-logo h2 {
+    margin-left: 15px;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+}
+
+.footer-content {
+    padding-top: 54px;
+    padding-bottom: 54px;
+    max-width: 1221px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.colibri-info {
+    margin-top: 20px;
+    max-width: 197px;
+    width: 100%;
+}
+
+.colibri-social ul {
+    margin-top: 65px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.footer-links {
+    margin: 20px 15px 0;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mailing {
+    margin-top: 20px;
+    max-width: 172px;
+    width: 100%;
+} 
+
+.mailing button {
+    margin-top: 48px;
+    
+    outline: none;
+    border: none;
+
+    width: 141px;
+    height: 37px;
+
+    background: #2670DD;
+    box-shadow: 4px 4px 26px 2px #2670DD;
+    border-radius: 8px;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    color: #FFFFFF;
+}
+
+.mailing h3,
+.footer-links .links-group .links-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #266FDC;
+}
+
+.footer.pink .mailing h3,
+.footer.pink .footer-links .links-group .links-title {
+    color: #7F13FF;
+}
+
+.footer-links .links-group ul {
+    list-style: none;
+}
+
+.footer-links .links-group li {
+    margin-top: 20px;
+}
+
+.footer-links .links-group a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 16px;
+    transition: .25s;
+}
+
+.footer-links .links-group a:hover {
+    color: rgba(255, 255, 255, 0.527);
+}
+
+@media (max-width: 1051px) {
+    .footer-content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 854px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        width: auto;
+        height: 300px;
+        flex-wrap: nowrap;
+    }
+}

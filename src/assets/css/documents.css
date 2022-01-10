@@ -1,0 +1,123 @@
+.documents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.document {
+    display: flex;
+    flex-direction: column;
+    background: #553880;
+    border-radius: 8px;
+    max-height: 610px;
+    margin-bottom: 30px;
+}
+
+.document__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    height: 550px;
+}
+
+.document__content img {
+    max-width: 100%;
+}
+
+.extension {
+    display: flex;
+    max-width: 99px;
+    background: #342150;
+    border-radius: 8px 0px;
+    padding: 6px 29px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125.6%;
+    text-align: center;
+    color: #886ABD;    
+}
+
+.document__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 125.6%;
+    text-align: center;
+    color: #C4A2FF;
+    max-width: 420px;
+}
+
+.document-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.document-footer .cta a {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125.6%;
+    color: #B286FF;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+}
+
+.cta.muted a {
+    color: #886ABD;
+}
+
+.document-footer .cta a:hover {
+    text-shadow: 0px 0px 7px rgba(178, 134, 255, 0.5);
+}
+
+@media (max-width: 464px) {
+    .document__title {
+        max-width: none;
+    }
+
+    .document {
+        width: 100%;
+    }
+}
+
+@media (max-width: 415px) {
+    .document__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    .document__title {
+        font-size: 18px;
+    }
+
+    .document__content img {
+        max-width: 50%;
+    }
+
+    .document__content {
+        max-height: 350px;
+    }
+
+    .document-footer .cta a {
+        font-size: 12px;
+    }
+<<<<<<< HEAD
+}
+
+.mg-1 {
+    margin-bottom: 300px;
+}
+
+.error-handler {
+    text-align: center;
+=======
+>>>>>>> 55e65b916bdced350361962e0d6b7fdc03e871fa
+}

@@ -1,0 +1,155 @@
+
+.main {
+    width: 100%;
+    height: 1024px;
+    background: linear-gradient(180deg, #221644 0%, #321F57 54.17%, #422963 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../assets/imgs/wrapper-dots.svg");
+    top: 9px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 18px);
+    z-index: 1;
+}
+
+.triangle {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 156px;
+}
+
+.tagline {
+    margin-top: 208px;
+    max-width: 1086px;
+    margin-right: 120px;
+
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 125.6%;
+    /* or 100px */
+
+    z-index: 7;
+    color: #FFF2FB;
+}
+
+.purple {
+    background: linear-gradient(#9E86D7, #7D00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.jobs {
+    position: absolute;
+    top: 442px;
+    left: 30%;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 125.6%;
+    z-index: 7;
+    color: #FFFFFF;
+}
+
+.jobs-content {
+    position: relative;
+}
+
+.line, .active-line {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    border-radius: 4px;
+    z-index: 4;
+}
+
+.jobs-title {
+    padding: 8px 0;
+    transition: .25s;
+}
+
+.line {
+    width: 100%;
+    background: #3F2D60;
+}
+
+.active-line {
+    width: 83px;
+    background: linear-gradient(270deg, #9E86D7 0%, #7D00FF 100%);
+    transition: 1s;
+}
+
+.jobs-content:hover .active-line {
+    width: 120px;
+}
+
+.jobs:hover {
+    cursor: pointer;
+}
+
+.jobs:hover .jobs-title {
+    color: #9E86D7;
+}
+
+.jobs-content .active-line.active {
+    width: 100%;
+}
+
+@media (max-width: 1220px) {
+    .jobs {
+        top: 522px;
+    }
+}
+
+@media (max-width: 897px) {
+    .tagline {
+        font-size: 60px;
+        margin-right: 0;
+    }
+
+    .triangle {
+        left: -260px;
+    }
+
+    .main {
+        height: 102vh;
+    }
+}
+
+@media (max-width: 617px) {
+    .tagline {
+        font-size: 40px;
+    }
+
+    .triangle {
+        width: 700px;
+        top: 210px;
+        left: -300px;
+    }
+
+    .jobs {
+        left: 20px;
+        top: 380px;
+    }
+
+}
+
+@media (max-width: 417px) {
+    .tagline {
+        font-size: 32px;
+    }
+
+    .triangle {
+        width: 500px;
+        top: 50vh;
+        left: -200px;
+    }
+}
