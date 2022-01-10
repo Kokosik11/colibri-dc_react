@@ -1,7 +1,3 @@
 node_modules
 .DS_Store
-<<<<<<< HEAD
 *.local
-=======
-*.local
->>>>>>> 532ca45bf4ffcadf0e67d931e9843df93d81a66b
