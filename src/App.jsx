@@ -48,12 +48,9 @@ const App = () => {
       { isBurgerOpened ? <Burger onBurgerOpen={ handleBurgerCloseButtonClick } className='burger' /> : null }
       <Switch>
         
-<<<<<<< HEAD
         <Route path='/businesscard'>
           <BusinessCard />
         </Route>
-=======
->>>>>>> 55e65b916bdced350361962e0d6b7fdc03e871fa
         <Route path='/documents'>
           <Documents />
         </Route>

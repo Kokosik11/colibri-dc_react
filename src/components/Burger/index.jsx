@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import "./style.css"
 
-import Logo from '../../assets/imgs/colibri-logo.png';
+import Logo from '../../assets/imgs/colibri-logo.svg';
 import Phone from '../../assets/imgs/Calling.png';
 import Close from '../../assets/imgs/close.svg';
 
@@ -93,12 +93,8 @@ const LeftContent = props => {
                     <div className="burger-left_block">
                         {!navigationBtn && 
                         <LinkGroup className="bl-links">
-                            <NavLink to="/" onClick={ props.onBurgerOpen }>Портфолио</NavLink>
-<<<<<<< HEAD
+                            {/* <NavLink to="/" onClick={ props.onBurgerOpen }>Портфолио</NavLink> */}
                             <NavLink to="/businesscard" onClick={ props.onBurgerOpen }>Визитка</NavLink>
-=======
-                            <NavLink to="/" onClick={ props.onBurgerOpen }>Услуги</NavLink>
->>>>>>> 55e65b916bdced350361962e0d6b7fdc03e871fa
                             <NavLink to="/roadmap" onClick={ props.onBurgerOpen }>Этапы разработки</NavLink>
                         </LinkGroup>
                         }
@@ -171,7 +167,7 @@ const RightContent = props => {
                 <div className="social-links">
                     <a href="https://www.linkedin.com/company/colibri-development-company/" target="_blank"><img src={ LinkedinIcon } alt="Linkedin icon" /></a>
                     <a href="https://www.instagram.com/colibridevcom/" target="_blank"><img src={ InstagramIcon } alt="Instagram icon" /></a>
-                    <a href="https://t.me/MikhailColibri"><img src={ TelegramIcon } alt="Telegram icon" /></a>
+                    <a href="https://t.me/MikhailColibri" target="_blank"><img src={ TelegramIcon } alt="Telegram icon" /></a>
                 </div>
             </div>
 

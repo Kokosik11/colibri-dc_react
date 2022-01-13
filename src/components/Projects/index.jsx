@@ -31,7 +31,7 @@ const Projects = props => {
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
         setError("");
 
-        fetch("api/project", {
+        fetch(process.env.NODE_ENV !== 'production' ? "http://localhost:3010/api/project" :"api/project", {
             method: "GET",
             credentials: "include",
             headers: {

@@ -11,6 +11,16 @@ const Bids = (props) => {
     const [ isPersonalData, setPersonalData ] = useState(false);
     const [ refObject, setRefObject ] = useState({});
     const [ error, setError ] = useState('');
+    const [ csrfToken, setCsrfToken ] = useState('');
+
+    useEffect(() => {
+        fetch(process.env.NODE_ENV !== 'production' ? "http://localhost:3010/api/bid/csrftoken" : "/api/bid/csrftoken")
+            .then(response => response.json())
+            .then(response => {
+                // console.log(response)
+                setCsrfToken(response.csrf);
+            })
+    }, [])
 
     const handleButtonClick = () => {
         // let numberReg = new RegExp("/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/");
@@ -33,19 +43,24 @@ const Bids = (props) => {
             username: userName
         }
 
-        fetch("api/bid/create", {
+        fetch(process.env.NODE_ENV !== 'production' ? "http://localhost:3010/api/bid/create" : "api/bid/create", {
             method: "POST",
             credentials: "include",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "X-CSRF-Token": csrfToken
             },
             body: JSON.stringify(bidBody)
         })
         .then(response => {
+            // console.log(response);
             setError('');
             setEmail('');
             setUserName('');
             setPersonalData(false);
+            if(!response.ok) {
+                setError('Упс... Ошибочка!')
+            }
         })
     }
 

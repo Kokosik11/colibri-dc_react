@@ -121,13 +121,10 @@ body {
         font-size: 24px;
         line-height: 1.1em;
     }
-<<<<<<< HEAD
 
     .faq-content .answer {
         font-size: 18px;
     }
-=======
->>>>>>> 55e65b916bdced350361962e0d6b7fdc03e871fa
 }
 
 @media (max-width: 420px) {
@@ -135,11 +132,8 @@ body {
         font-size: 18px;
         line-height: 1.1em;
     }
-<<<<<<< HEAD
 
     .faq-content .answer {
         font-size: 12px;
     }
-=======
->>>>>>> 55e65b916bdced350361962e0d6b7fdc03e871fa
 }

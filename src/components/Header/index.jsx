@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
-import Logo from '../../assets/imgs/colibri-logo.png';
+import Logo from '../../assets/imgs/colibri-logo.svg';
 
 import "./style.css"
 

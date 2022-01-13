@@ -26,7 +26,7 @@ const Service = () => {
         const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
         setError("");
 
-        fetch("/api/service", {
+        fetch(process.env.NODE_ENV !== 'production' ? "http://localhost:3010/api/service" : "/api/service", {
             method: "GET",
             credentials: "include",
             headers: {

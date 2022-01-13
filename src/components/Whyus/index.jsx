@@ -15,7 +15,7 @@ import IconHeart from "../../assets/imgs/planets/icon-heart.svg";
 import SunImg from "../../assets/imgs/planets/sun.svg";
 
 let planets = [
-    { id: 0, title: "Planet Blue", hiddenText: "Конкурентная стоимость", image: PlanetBlue, icon: IconFire },
+    { id: 0, title: "Planet Blue", hiddenText: "Комфорт и удобное взаимодействие", image: PlanetBlue, icon: IconFire },
     { id: 1, title: "Planet Purple", hiddenText: "Скорость разработки", image: PlanetPurple, icon: IconLightning },
     { id: 2, title: "Planet Pink", hiddenText: "Индивидуальность", image: PlanetPink, icon: IconRuby },
     { id: 3, title: "Planet Yellow", hiddenText: "Поддержка", image: PlanetYellow, icon: IconHeart },

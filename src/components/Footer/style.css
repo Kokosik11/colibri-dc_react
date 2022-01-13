@@ -46,16 +46,16 @@
 }
 
 .colibri-social ul {
-    margin-top: 65px;
-    width: 50%;
+    margin-top: 30px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style: none;
 }
 
 .footer-links {
     margin: 20px 15px 0;
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -125,7 +125,7 @@
     }
 }
 
-@media (max-width: 854px) {
+@media (max-width: 944px) {
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -136,5 +136,6 @@
         width: auto;
         height: 300px;
         flex-wrap: nowrap;
+        height: 500px;
     }
 }
