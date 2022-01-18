@@ -3,6 +3,7 @@ import ArrowDown from '../assets/imgs/arrow-down.svg';
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 
+import Loader from '../components/Loader';
 
 const Question = props => {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -33,30 +34,53 @@ const Question = props => {
 
 function Faqpage() {
     const [ questions, setQuestions ] = useState([]);
+    const [ error, setError ] = useState("");
+    const [ loading, setLoading ] = useState(true);
 
     useEffect(() => {
-        let _questions = [
-            { id: 0, title: "Почему стоит нанять веб-агенство?", content: "Это надёжно, качественно и быстро! В случае с фрилансом Вы можете наткнуться на множество проблем, например: срок выполнения затянется или разработка потребует слишком много времени, Вы вносите средства ещё до момента завершения проекта, тех. задание составлено некорректно и многие другие. Web-агентво даёт Вам простор для желаний, полную уверенность в результате, понимание чего ждать, скорость!" },
-            { id: 1, title: "Как долго будет выполняться разработка", content: "Срок выполнения зависит сложности сайта и требований клиента. Если красивый, но просто1 по своей сути лендинг может занять 1-2 недели, то создание мсштабного интернет-магазина может занять куда большее время, от двух месяцев и более." },
-            { id: 2, title: "Как вы можете гарантировать качество?", content: "Ещё до подписания на этапе переговоров и до подписания договора мы предоставим макет будущего сайта, опишем весь функционал, а также поможем составить подробное техническое задание, чтобы Вы полностью понимали за что вы отдаёте деньги." },
-            { id: 3, title: "Что будет после завершения разработки моего проекта?", content: "После завершения разработки и полного запуска сайта, будет осуществляться бесплатная поддержка. Срок поддержки от одного до трёх месяцев, в зависимости от вида услуги. После вы можете продлить поддержку." },
-            { id: 4, title: "Как я могу проверить этапы разработки моего проекта?", content: "Вы в любой момент можете написать нашему менеджеру и узнать, на каком этапе находится разработка. Также, Вам будет приходить письмо, с отчётом по проделанной на данный момент работе. Периодичность таких сообщений будет оговорена заранее." },
-            { id: 5, title: "Какие технологии вы используйте?", content: "Мы используем современные технологии web-проектирования. Они разнятся в зависимости от специфики разрабатоемого сайта. Подробнее о них Вы сможете узнать на этапе переговоров." },
-            { id: 6, title: "Сколько будет стоить разработка?", content: "Стоимость разработки зависит от множества факторов разработки. Примерную стоимость Вы сможете узнать позвонив или написав нам." },
-            { id: 7, title: "Что входит в поддержку?", content: "В поддержку входит исправление возможных ошибок, устранение неполадок с хостингом, 50% скидка на все услуги по обновлению или дополнению сайта." },
-        ]
 
-        setQuestions(_questions);
+        const genericErrorMessage = "Упс... Не можем получить данные. Попробуйте позже";
+        setError("");
+
+        fetch(process.env.NODE_ENV !== 'production' ? "http://localhost:3010/api/faq" : "/api/faq", {
+            method: "GET",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(async response => {
+            if(response.status === 502) {
+                setError("В Базе данных нет записей")
+            } else if(response.ok) {
+                const data = await response.json();
+                setLoading(false);
+                setQuestions(data.faq);
+            } else {
+                setError(genericErrorMessage);
+                setLoading(false);
+            }
+        }, async error => {
+            setError(genericErrorMessage);
+            setLoading(false);
+        })
+        .catch(error => {
+            setError(genericErrorMessage);
+            console.log(error);
+        })
     }, [])
 
     return (
         <main className="App">
             <h1 className="h1-faq">Faq</h1>
-            <div className="faq-block">
-                { questions.map(question => (
-                    <Question question={question} key={question.id} />
-                ))}
-            </div>
+            { error ? (<div className="error-handler">{ error }</div>) 
+            : loading ? <Loader /> : (
+                <div className="faq-block">
+                    { questions.map(question => (
+                        <Question question={question} key={question._id} />
+                    ))}
+                </div>
+                ) }
 
             <Footer color="pink" />
         </main>

@@ -56,6 +56,7 @@ const Service = () => {
         })
     }, [])
 
+
     // const isFirefox = typeof InstallTrigger !== 'undefined';
     // let Card = isFirefox ?  FirefoxCard : ServiceCard;
     let Card = FirefoxCard;
@@ -77,8 +78,9 @@ const Service = () => {
                 spaceBetween={93} 
                 loop={true} 
                 autoplay={{
-                    "delay": 6000,
-                    "disableOnInteraction": false
+                    "disableOnInteraction": false,
+                    "pauseOnMouseEnter": true,
+                    "delay": 6000
                 }}
                 speed={500}
                 scrollbar={{
@@ -86,6 +88,7 @@ const Service = () => {
                     "draggable": true,
                 }}
                 effect={'fade'}
+                initialSlide="1"
                 centeredSlides={true} 
                 loopFillGroupWithBlank={true} 
                 className="mySwiper"
@@ -98,6 +101,7 @@ const Service = () => {
                             term={ `от ${card.term} дней` }
                             priceLevel={ card.priceLevel }
                             cardClass={ card.background }
+                            details={ card.details }
                         />
                     </SwiperSlide>
                 ))}

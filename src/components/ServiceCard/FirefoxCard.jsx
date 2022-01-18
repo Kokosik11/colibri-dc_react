@@ -21,29 +21,39 @@ const FirefoxCard = props => {
             </div>
         </div>
     ) : (
-        <div className={ props.cardClass ? `card-firefox ${ props.cardClass }` : "card-firefox"}>
-            <div className="card-content">
-                <img className="card-noise" src={ Noise } alt="Background noise" />
-                <div className="card-wrapper">
-                    <div className="card-description">
-                        {props.description ? props.description : "This text about this card"}
+        <div className="card-papper">
+            <div className={ props.cardClass ? `card-firefox card-front ${ props.cardClass }` : "card-firefox card-front"}>
+                <div className="card-content">
+                    <img className="card-noise" src={ Noise } alt="Background noise" />
+                    <div className="card-wrapper">
+                        <div className="card-description">
+                            {props.description ? props.description : "This text about this card"}
+                        </div>
+                        <h3 className="card-title">
+                            {props.title ? props.title : "This text is title"}
+                        </h3>
+                        <div className="card-term">
+                            {props.term ? props.term : "This text is term"}
+                        </div>
                     </div>
-                    <h3 className="card-title">
-                        {props.title ? props.title : "This text is title"}
-                    </h3>
-                    <div className="card-term">
-                        {props.term ? props.term : "This text is term"}
-                    </div>
-                </div>
 
-                {props.priceLevel ? 
-                <div className="card-price">
-                    <div className="card-price_level">{ priceLevelFunc(props.priceLevel) }</div>
-                    <div className="card-price_bg">{ priceLevelFunc(props.priceLevel) }</div>
-                </div> 
-                : ""}
+                    {props.priceLevel ? 
+                    <div className="card-price">
+                        <div className="card-price_level">{ priceLevelFunc(props.priceLevel) }</div>
+                        <div className="card-price_bg">{ priceLevelFunc(props.priceLevel) }</div>
+                    </div> 
+                    : ""}
+                </div>
             </div>
+
+            <div className={ props.cardClass ? `card-firefox card-back ${ props.cardClass }` : "card-firefox card-back"}>
+                <div className="card-details" dangerouslySetInnerHTML={{__html: props.details}}>
+
+                </div>
+                
+            </div> 
         </div>
+        
     )
 }
 
